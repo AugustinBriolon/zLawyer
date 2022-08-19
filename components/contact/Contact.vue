@@ -122,7 +122,6 @@
                 {{ pays }}
               </option>
             </select>
-            <!-- <input type="text" id="country" name="country" v-model="pays" /> -->
           </div>
 
           <div class="grid grid-cols-2">

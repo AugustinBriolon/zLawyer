@@ -4,7 +4,7 @@
             <h1 class="text-center lg:text-left mb-14">La solution de gestion de cabinets d’avocats <br><span class="text-orange">simple, <br>ergonomique, <br>sans engagement !</span></h1>
             <NuxtLink to="/contact" class="button-orange w-max">Je souhaite une démonstration</NuxtLink>
         </div>
-        <div>
+        <div class="container-img">
             <img class="w-full" :src="illustrationHero2" alt="illustration du logiciel">
             <typewriter :replace="replace" :type-interval="20" :replace-interval="3000">
                 <p class="text-replace text-center text-2xl hidden lg:block">La solution la mieux notée par vos confrères !</p>
@@ -43,6 +43,18 @@ export default {
 
     .hero{
         padding-top: 180px;
+        perspective: 1500px;
+    }
+    .container-img {
+        perspective: 1500px;
+    }
+    .container-img img{
+        transform: rotateY(-15deg) scale(1.1);
+    }
+    @media screen and (max-width : 1024px) {
+        .container-img img{
+            transform: rotateY(0deg) scale(1);
+        }
     }
     .text-replace{
         font-family: 'Roboto-Regular', sans-serif;
