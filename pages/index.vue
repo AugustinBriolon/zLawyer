@@ -59,9 +59,14 @@ export default {
 <style scoped>
 .cookies-container{
   padding: 50px 20px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.cookies-container .button-orange{
+  margin: 5px;
+  width: 140px;
 }
 
 </style>
