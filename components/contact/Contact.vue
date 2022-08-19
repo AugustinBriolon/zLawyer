@@ -269,7 +269,6 @@ export default {
 <style scoped>
 .container-contact {
   min-height: 950px;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
