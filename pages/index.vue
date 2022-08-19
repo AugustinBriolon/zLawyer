@@ -12,12 +12,12 @@
     <Pricing />
     <Footer />
     <cookie-law>
-      <div slot-scope="props">
-        <button class="button-orange" @click="props.accept"><span>Accepter</span></button>
-        <p>
-          Nous utilisons les cookies pour vous garantir la meilleure expérience
-        </p>
-        <button class="button-orange" @click="props.close"><span>Ignorer</span></button>
+      <div slot-scope="props" class="cookies-container">
+        <p>Nous utilisons les cookies pour vous garantir la meilleure expérience.</p>
+        <div>
+          <button class="button-orange" @click="props.accept"><span>Accepter</span></button>
+          <button class="button-orange" @click="props.close"><span>Ignorer</span></button>
+        </div>
       </div>
 
     </cookie-law>
@@ -36,7 +36,7 @@ import Testimonials from "../components/index/Testimonials.vue";
 import Infos from "../components/index/Infos.vue";
 import Pricing from "../components/index/Pricing.vue";
 import Footer from "../components/Footer.vue";
-import CookieLaw from 'vue-cookie-law'
+import CookieLaw from 'vue-cookie-law';
 
 export default {
   components: {
@@ -55,3 +55,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.cookies-container{
+  padding: 50px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+</style>
