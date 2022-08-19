@@ -5,7 +5,7 @@
             <NuxtLink to="/contact" class="button-orange w-max">Je souhaite une démonstration</NuxtLink>
         </div>
         <div class="container-img">
-            <img class="w-full" :src="illustrationHero2" alt="illustration du logiciel">
+            <img class="w-full" :src="illustrationHero" alt="illustration du logiciel">
             <typewriter :replace="replace" :type-interval="20" :replace-interval="3000">
                 <p class="text-replace text-center text-2xl hidden lg:block">La solution la mieux notée par vos confrères !</p>
             </typewriter>
@@ -17,8 +17,7 @@
 
 <script>
 
-import illustrationHero1 from "../../assets/images/hero/illustrationHero1.png";
-import illustrationHero2 from "../../assets/images/hero/illustrationHero2.png";
+import illustrationHero from "../../assets/images/hero/illustrationHero.png";
 import Typewriter from "typewriter-vue";
 
 export default {
@@ -27,8 +26,7 @@ export default {
     },
     data: function() {
         return {
-            illustrationHero1,
-            illustrationHero2,
+            illustrationHero,
             replace: [
                 { from: "La solution la mieux notée par vos confrères", to: "Votre solution de gestion de cabinet qui vous fait gagner du temps !" },
             ],

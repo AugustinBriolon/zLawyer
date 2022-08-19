@@ -13,13 +13,12 @@
     <Footer />
     <cookie-law>
       <div slot-scope="props" class="cookies-container">
-        <p>Nous utilisons les cookies pour vous garantir la meilleure expérience.</p>
+        <p>Nous utilisons les <nuxt-link class="text-link" to="/politique-de-cookies">cookies</nuxt-link> pour vous garantir la meilleure expérience.</p>
         <div>
           <button class="button-orange" @click="props.accept"><span>Accepter</span></button>
           <button class="button-orange" @click="props.close"><span>Ignorer</span></button>
         </div>
       </div>
-
     </cookie-law>
   </div>
 </template>
