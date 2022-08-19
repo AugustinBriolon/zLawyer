@@ -47,11 +47,11 @@ export default {
         perspective: 1500px;
     }
     .container-img img{
-        transform: rotateY(-15deg) scale(1.1);
+        transform: rotateY(-15deg);
     }
     @media screen and (max-width : 1024px) {
         .container-img img{
-            transform: rotateY(0deg) scale(1);
+            transform: rotateY(0deg);
         }
     }
     .text-replace{
