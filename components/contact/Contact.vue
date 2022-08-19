@@ -277,7 +277,7 @@ export default {
 
 
 .card-contact {
-  margin-top: 120px;
+  margin: 120px 0;
   width: 80%;
   border-radius: var(--radius-current);
   box-shadow: var(--shadow-current);
