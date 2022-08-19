@@ -11,7 +11,16 @@
     <Clients />
     <Pricing />
     <Footer />
-    <cookie-law></cookie-law>
+    <cookie-law>
+      <div slot-scope="props">
+        <button class="button-orange" @click="props.accept"><span>Accepter</span></button>
+        <p>
+          Nous utilisons les cookies pour vous garantir la meilleure expérience
+        </p>
+        <button class="button-orange" @click="props.close"><span>Ignorer</span></button>
+      </div>
+
+    </cookie-law>
   </div>
 </template>
 
