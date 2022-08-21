@@ -6,7 +6,7 @@
         <!-- Card Features Facturation -->
         <div class="md:px-8">
             <div class="card-features">
-                <img class="image-features" :src="features1" alt="illustration de la fonctionnalitée facturation">
+                <img class="image-features" :src="features1" alt="illustration de la fonctionnalitée facturation" @click="e => e.target.classList.toggle('active')">
                 <div class="card-features-description">
                     <h3><span class="text-underline">Facturation</span> <br> Arbitrer & gérer la rentabilité</h3>
                     <p>Que vous souhaitiez mesurer les temps réels passés, valoriser le coût global réel du dossier, faire vos arbitrages de facturation sans effacer les durées réelles et donc vos coûts réels, notre solution de facturation pour avocat vous offre la possibilité de mesurer efficacement la rentabilité de vos dossiers ou de vos forfaits …
@@ -28,14 +28,15 @@
                         <a target="_blank" href="https://play.google.com/store/apps/details?id=com.zelesolution.zlawyer&hl=fr&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img class="hover:opacity-30 duration-150 cursor-pointer w-40 mr-3 mb-3" :src="badgePlayStore" alt="logo de téléchargement vers le play store"></a>
                     </div>
                 </div>
-                <img :src="features2" alt="illustration de l'application mobile">
+                <!-- <img class="image-mobile" :src="features2" alt="illustration de l'application mobile" @click="e => e.target.classList.toggle('active')"> -->
+                <img class="image-mobile" :src="features2" alt="illustration de l'application mobile">
             </div>
         </div>
 
         <!-- Card Features Gestion -->
         <div class="md:px-8">
             <div class="card-features">
-                <img class="image-features" :src="features3" alt="illustration de la fonctionnalitée de gestion">
+                <img class="image-features" :src="features3" alt="illustration de la fonctionnalitée de gestion" @click="e => e.target.classList.toggle('active')">
                 <div class="card-features-description">
                     <h3><span class="text-underline">Une gestion</span> documentaire sans contrainte</h3>
                     <p>Notre solution de gestion de cabinet d’avocat vous aide dans la gestion des documents de chaque dossier : modèles, organisation, classement, et ce, sans privatisation puisque les documents restent évidemment sur votre serveur / disque actuel. En effet, zLawyer sait se greffer à votre organisation actuelle sans aucun changement. (Disponible seulement sous Windows)
@@ -55,14 +56,14 @@
                     </p>
                     <NuxtLink class="button-transparent" to="/contact">Je souhaite une démonstration</NuxtLink>
                 </div>
-                <img class="image-features" :src="features4" alt="illustration de la fonctionnalitée dossiers">
+                <img class="image-features" :src="features4" alt="illustration de la fonctionnalitée dossiers" @click="e => e.target.classList.toggle('active')">
             </div>
         </div>
 
         <!-- Card Features Essentiel -->
         <div class="md:px-8">
             <div class="card-features">
-            <img class="image-features" :src="features5" alt="illustration de la l'essentiel de l'application">
+                <img class="image-features" :src="features5" alt="illustration de la l'essentiel de l'application" @click="e => e.target.classList.toggle('active')">
                 <div class="card-features-description">
                     <h3><span class="text-underline">L’essentiel</span> en un coup d’oeil</h3>
                     <p>La fenêtre principale de la solution de cabinet d’avocat zLawyer affiche votre tableau de bord personnel. Cette fenêtre vous permet d’accéder à l’ensemble des informations prioritaires de votre activité en un seul coup d’œil : vos échéances, vos dossiers à facturer, vos factures à relancer, et la synthèse de vos saisies des temps .
@@ -81,14 +82,14 @@
                         </p>
                     <NuxtLink class="button-transparent" to="/contact">Je souhaite une démonstration</NuxtLink>
                 </div>
-                <img class="image-features" :src="features6" alt="illustration de la fonctionnalitée timer">
+                <img class="image-features" :src="features6" alt="illustration de la fonctionnalitée timer" @click="e => e.target.classList.toggle('active')">
             </div>
         </div>
 
         <!-- Card Features Clients -->
         <div class="md:px-8">
             <div class="card-features">
-                <img class="image-features" :src="features7" alt="illustration de la fonctionnalitée accès client">
+                <img class="image-features" :src="features7" alt="illustration de la fonctionnalitée accès client" @click="e => e.target.classList.toggle('active')">
                 <div class="card-features-description">
                     <h3>Donnez à vos clients <span class="text-underline">un accès à leur dossier</span> sur le web.</h3>
                     <p>La fenêtre principale de la solution de cabinet d’avocat zLawyer affiche votre tableau de bord personnel. Cette fenêtre vous permet d’accéder à l’ensemble des informations prioritaires de votre activité en un seul coup d’œil : vos échéances, vos dossiers à facturer, vos factures à relancer, et la synthèse de vos saisies des temps .
@@ -97,6 +98,8 @@
                 </div>
             </div>
         </div>
+
+        <div class="background-features"></div>
 
     </div>
 </template>
@@ -126,13 +129,26 @@ export default {
             features5,
             features6,
             features7,
+
+            isActive: false,
         }
     },
+    methods: {
+    }
 }
 
 </script>
 
 <style scoped>
+    .background-features .active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.359);
+        z-index: 99;
+    }
     .card-features{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -151,6 +167,26 @@ export default {
     .card-features .image-features{
         border-radius: var(--radius-current);
         box-shadow: var(--shadow-current);
+        z-index: 99;
+        cursor: pointer;
+    }
+    .image-mobile{
+        z-index: 99;
+        /* cursor: pointer; */
+    }
+    .image-mobile:hover, .image-features:hover{
+        transition: .3s;
+        transform: scale(1.02);
+    }
+    .image-mobile.active, .image-features.active{
+        transition: 0s;
+        position: fixed;
+        width: 60%;
+        top: 50vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        box-shadow: 0px 0px 900px 900px rgba(0,0,0,0.65);
     }
     .card-features .card-features-description{
         padding: 24px;
