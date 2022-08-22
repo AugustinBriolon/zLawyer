@@ -181,12 +181,19 @@ export default {
     .image-mobile.active, .image-features.active{
         transition: 0s;
         position: fixed;
-        width: 60%;
+        height: 70vh;
+        max-width: 1100px;
         top: 50vh;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 100;
         box-shadow: 0px 0px 900px 900px rgba(0,0,0,0.65);
+    }
+    @media screen and (max-width : 1200px) {
+        .image-mobile.active, .image-features.active{
+            height: auto;
+            width: 90%;
+        }
     }
     .card-features .card-features-description{
         padding: 24px;
