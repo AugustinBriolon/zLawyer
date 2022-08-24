@@ -4,7 +4,9 @@
       <h2 class="text-orange">Ils nous font confiance</h2>
 
       <div class="wrapperContainerTop">
+
         <div class="imagesContainer w-full flex items-center justify-between">
+
           <img :src="azarmi" alt="Logo Arasmis" class="image w-auto h-28" />
           <img :src="baro" alt="Logo Baro" class="image w-auto h-28" />
           <img :src="betto" alt="Logo Betto" class="image w-auto h-28" />
@@ -14,8 +16,11 @@
             class="image w-auto h-28"
           />
           <img :src="flichy" alt="Logo Flichy" class="image w-auto h-28" />
+
         </div>
+
         <div class="imagesContainer w-full flex items-center justify-between">
+
           <img :src="azarmi" alt="Logo Arasmis" class="image w-auto h-28" />
           <img :src="baro" alt="Logo Baro" class="image w-auto h-28" />
           <img :src="betto" alt="Logo Betto" class="image w-auto h-28" />
@@ -25,13 +30,14 @@
             class="image w-auto h-28"
           />
           <img :src="flichy" alt="Logo Flichy" class="image w-auto h-28" />
+
         </div>
       </div>
 
       <div class="wrapperContainerBottom">
-        <div
-          class="imagesContainerBottom w-full flex items-center justify-between"
-        >
+
+        <div class="imagesContainerBottom w-full flex items-center justify-between">
+
           <img
             :src="bonilfassi"
             alt="Logo Bonilfassi"
@@ -49,15 +55,17 @@
             class="imageBottom w-auto h-28"
           />
           <img :src="ollyns" alt="Logo Ollyns" class="imageBottom w-auto h-24" />
+
         </div>
-        <div
-          class="imagesContainerBottom w-full flex items-center justify-between"
-        >
+
+        <div class="imagesContainerBottom w-full flex items-center justify-between">
+
           <img :src="valther" alt="Logo Valther" class="imageBottom w-auto h-28" />
           <img :src="lombard" alt="Logo Lombard" class="imageBottom w-auto h-28" />
           <img :src="flichy" alt="Logo Flichy" class="image w-auto h-28" />
           <img :src="vatier" alt="Logo Vatier" class="imageBottom w-auto h-28" />
           <img :src="azarmi" alt="Logo Azarmi" class="imageBottom w-auto h-28" />
+
         </div>
       </div>
     </div>
@@ -79,8 +87,6 @@ import valther from "../../assets/images/clients/valtherLogo.webp";
 import vatier from "../../assets/images/clients/vatierLogo.webp";
 import vinci from "../../assets/images/clients/vinciLogo.webp";
 
-import { gsap } from "gsap";
-
 export default {
   data: function () {
     return {
@@ -99,90 +105,43 @@ export default {
       vinci,
     }
   },
-
-  mounted() {
-    this.wrapAnimationInfinite()
-    this.wrapAnimationInfiniteBottom()
-  },
-
-  methods: {
-    wrapAnimationInfinite() {
-      if (window.matchMedia("(max-width: 1200px)").matches) {
-        gsap.set(".wrapperContainerTop", { xPercent: -200 })
-      } else {
-        gsap.set(".wrapperContainerTop", { xPercent: -50 })
-      }
-
-      let imagesWidth = 300
-      var totalWidth = imagesWidth * 10
-      var test2 = document.querySelectorAll(".wrapperContainerTop .image")
-      var dirFromRight = "-=" + totalWidth
-
-      var mod = gsap.utils.wrap(0, totalWidth)
-
-      gsap.set(test2, {
-        x: function (i) {
-          return i * imagesWidth;
-        },
-      });
-
-      var action = gsap.timeline().to(test2, {
-        x: dirFromRight,
-        modifiers: {
-          x: (x) => mod(parseFloat(x)) + "px",
-        },
-        duration: 25,
-        ease: "none",
-        repeat: -1,
-      })
-    },
-
-    wrapAnimationInfiniteBottom() {
-      if (window.matchMedia("(max-width: 1200px)").matches) {
-        gsap.set(".wrapperContainerBottom", { xPercent: -200 })
-      } else {
-        gsap.set(".wrapperContainerBottom", { xPercent: -50 })
-      }
-
-      let imagesWidth = 300
-      var totalWidth = imagesWidth * 9
-      var test2 = document.querySelectorAll(
-        ".wrapperContainerBottom .imageBottom"
-      )
-      var dirFromLeft = "+=" + totalWidth
-
-      var mod = gsap.utils.wrap(0, totalWidth)
-
-      gsap.set(test2, {
-        x: function (i) {
-          return i * imagesWidth;
-        },
-      })
-
-      var action = gsap.timeline().to(test2, {
-        x: dirFromLeft,
-        modifiers: {
-          x: (x) => mod(parseFloat(x)) + "px",
-        },
-        duration: 25,
-        ease: "none",
-        repeat: -1,
-      })
-    },
-  },
 }
 </script>
 
 <style scoped>
-.imageBottom, .image {
-  position: absolute;
-}
-
 .wrapperContainerTop {
   padding-top: 40px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
 }
+.wrapperContainerTop  .imagesContainer {
+  white-space: nowrap;
+  animation: slideLeft 40s infinite linear;
+}
+
+
 .wrapperContainerBottom {
   padding-top: 150px;
   margin-bottom: 65px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
 }
+
+.wrapperContainerBottom  .imagesContainerBottom {
+  white-space: nowrap;
+  animation: slideRight 40s infinite linear reverse;
+}
+
+
+@keyframes slideLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
 </style>
