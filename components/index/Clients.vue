@@ -106,7 +106,7 @@ export default {
 
 .wrapperContainerBottom  .imagesContainerBottom {
   white-space: nowrap;
-  animation: slideRight 40s infinite linear reverse;
+  animation: slideLeft 40s infinite linear reverse;
 }
 
 
