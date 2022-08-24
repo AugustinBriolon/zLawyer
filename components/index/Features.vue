@@ -6,7 +6,10 @@
         <!-- Card Features Facturation -->
         <div class="md:px-8">
             <div class="card-features">
-                <img class="image-features" :src="features1" alt="illustration de la fonctionnalitée facturation" @click="e => e.target.classList.toggle('active')">
+                <div ref="popIn1" class="container-image-features" @click="openPopIn('popIn1')">
+                    <img class="close-pop-in" :src="cross">
+                    <img class="image-features" :src="features1" alt="illustration de la fonctionnalitée facturation">
+                </div>
                 <div class="card-features-description">
                     <h3><span class="text-underline">Facturation</span> <br> Arbitrer & gérer la rentabilité</h3>
                     <p>Que vous souhaitiez mesurer les temps réels passés, valoriser le coût global réel du dossier, faire vos arbitrages de facturation sans effacer les durées réelles et donc vos coûts réels, notre solution de facturation pour avocat vous offre la possibilité de mesurer efficacement la rentabilité de vos dossiers ou de vos forfaits …
@@ -36,7 +39,10 @@
         <!-- Card Features Gestion -->
         <div class="md:px-8">
             <div class="card-features">
-                <img class="image-features" :src="features3" alt="illustration de la fonctionnalitée de gestion" @click="e => e.target.classList.toggle('active')">
+                <div ref="popIn3" class="container-image-features" @click="openPopIn('popIn3')">
+                    <img class="close-pop-in" :src="cross">
+                    <img class="image-features" :src="features3" alt="illustration de la fonctionnalitée gestion">
+                </div>
                 <div class="card-features-description">
                     <h3><span class="text-underline">Une gestion</span> documentaire sans contrainte</h3>
                     <p>Notre solution de gestion de cabinet d’avocat vous aide dans la gestion des documents de chaque dossier : modèles, organisation, classement, et ce, sans privatisation puisque les documents restent évidemment sur votre serveur / disque actuel. En effet, zLawyer sait se greffer à votre organisation actuelle sans aucun changement. (Disponible seulement sous Windows)
@@ -56,14 +62,20 @@
                     </p>
                     <NuxtLink class="button-transparent" to="/contact">Je souhaite une démonstration</NuxtLink>
                 </div>
-                <img class="image-features" :src="features4" alt="illustration de la fonctionnalitée dossiers" @click="e => e.target.classList.toggle('active')">
+                <div ref="popIn4" class="container-image-features" @click="openPopIn('popIn4')">
+                    <img class="close-pop-in" :src="cross">
+                    <img class="image-features" :src="features4" alt="illustration de la fonctionnalitée dossiers">
+                </div>
             </div>
         </div>
 
         <!-- Card Features Essentiel -->
         <div class="md:px-8">
             <div class="card-features">
-                <img class="image-features" :src="features5" alt="illustration de la l'essentiel de l'application" @click="e => e.target.classList.toggle('active')">
+                <div ref="popIn5" class="container-image-features" @click="openPopIn('popIn5')">
+                    <img class="close-pop-in" :src="cross">
+                    <img class="image-features" :src="features5" alt="illustration de la fonctionnalitée essentiel de l'application">
+                </div>
                 <div class="card-features-description">
                     <h3><span class="text-underline">L’essentiel</span> en un coup d’oeil</h3>
                     <p>La fenêtre principale de la solution de cabinet d’avocat zLawyer affiche votre tableau de bord personnel. Cette fenêtre vous permet d’accéder à l’ensemble des informations prioritaires de votre activité en un seul coup d’œil : vos échéances, vos dossiers à facturer, vos factures à relancer, et la synthèse de vos saisies des temps .
@@ -82,14 +94,20 @@
                         </p>
                     <NuxtLink class="button-transparent" to="/contact">Je souhaite une démonstration</NuxtLink>
                 </div>
-                <img class="image-features" :src="features6" alt="illustration de la fonctionnalitée timer" @click="e => e.target.classList.toggle('active')">
+                <div ref="popIn6" class="container-image-features" @click="openPopIn('popIn6')">
+                    <img class="close-pop-in" :src="cross">
+                    <img class="image-features" :src="features6" alt="illustration de la fonctionnalitée timer">
+                </div>
             </div>
         </div>
 
         <!-- Card Features Clients -->
         <div class="md:px-8">
             <div class="card-features">
-                <img class="image-features" :src="features7" alt="illustration de la fonctionnalitée accès client" @click="e => e.target.classList.toggle('active')">
+                <div ref="popIn7" class="container-image-features" @click="openPopIn('popIn7')">
+                    <img class="close-pop-in" :src="cross">
+                    <img class="image-features" :src="features7" alt="illustration de la fonctionnalitée accès client">
+                </div>
                 <div class="card-features-description">
                     <h3>Donnez à vos clients <span class="text-underline">un accès à leur dossier</span> sur le web.</h3>
                     <p>La fenêtre principale de la solution de cabinet d’avocat zLawyer affiche votre tableau de bord personnel. Cette fenêtre vous permet d’accéder à l’ensemble des informations prioritaires de votre activité en un seul coup d’œil : vos échéances, vos dossiers à facturer, vos factures à relancer, et la synthèse de vos saisies des temps .
@@ -106,6 +124,7 @@
 
 <script>
 
+import cross from "../../assets/images/logos/cross.png";
 import features1 from "../../assets/images/features/features1.png";
 import features2 from "../../assets/images/features/features2.png";
 import features3 from "../../assets/images/features/features3.png";
@@ -122,6 +141,7 @@ export default {
             badgeAppStore,
             badgePlayStore,
 
+            cross,
             features1,
             features2,
             features3,
@@ -134,6 +154,10 @@ export default {
         }
     },
     methods: {
+        openPopIn(popIn) {
+            let popInToOpen = this.$refs[popIn]
+            popInToOpen.classList.toggle('active')
+        }
     }
 }
 
@@ -164,9 +188,11 @@ export default {
             grid-row-start: 1;
         }
     }
-    .card-features .image-features{
+    .image-features{
         border-radius: var(--radius-current);
         box-shadow: var(--shadow-current);
+    }
+    .card-features .container-image-features{
         z-index: 99;
         cursor: pointer;
     }
@@ -174,27 +200,47 @@ export default {
         z-index: 99;
         /* cursor: pointer; */
     }
-    .image-mobile:hover, .image-features:hover{
+    .image-mobile:hover, .container-image-features:hover{
         transition: .3s;
         transform: scale(1.02);
     }
-    .image-mobile.active, .image-features.active{
+    .container-image-features.active{
+        transform: scale(1);
         transition: 0s;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
         position: fixed;
-        height: 70vh;
-        max-width: 1100px;
-        top: 50vh;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.289);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: 100;
-        box-shadow: 0px 0px 900px 900px rgba(0,0,0,0.65);
+    }
+    .container-image-features.active .image-features{
+        box-shadow: none;
+        height: 70vh;
     }
     @media screen and (max-width : 1200px) {
-        .image-mobile.active, .image-features.active{
+        .container-image-features.active .image-features{
             height: auto;
             width: 90%;
         }
     }
+    .close-pop-in{
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        top: 120px;
+        right: 40px;
+        z-index: 9999;
+        display: none;
+    }
+    .container-image-features.active .close-pop-in{
+        display: block;
+    }
+
     .card-features .card-features-description{
         padding: 24px;
     }
