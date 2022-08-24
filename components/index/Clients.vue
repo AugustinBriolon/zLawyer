@@ -9,6 +9,9 @@
           <img :src="azarmi" alt="Logo Arasmis" class="image w-auto h-28" />
           <img :src="baro" alt="Logo Baro" class="image w-auto h-28" />
           <img :src="betto" alt="Logo Betto" class="image w-auto h-28" />
+          <img :src="valther" alt="Logo Valther" class="image w-auto h-28" />
+          <img :src="vinci" alt="Logo Vinci" class="image w-auto h-28" />
+          <img :src="vatier" alt="Logo Vatier" class="image w-auto h-28" />
 
         </div>
 
@@ -17,6 +20,9 @@
           <img :src="bonifassi" alt="Logo Bonifassi" class="image w-auto h-28"/>
           <img :src="lamartine" alt="Logo Lamartine" class="image w-auto h-28"/>
           <img :src="flichy" alt="Logo Flichy" class="image w-auto h-28" />
+          <img :src="lombard" alt="Logo Lombard" class="image w-auto h-28" />
+          <img :src="navacelle" alt="Logo Navacelle" class="image w-auto h-28"/>
+          <img :src="ollyns" alt="Logo Ollyns" class="image w-auto h-24" />
 
         </div>
       </div>
@@ -28,6 +34,9 @@
           <img :src="lombard" alt="Logo Lombard" class="imageBottom w-auto h-28" />
           <img :src="navacelle" alt="Logo Navacelle" class="imageBottom w-auto h-28"/>
           <img :src="ollyns" alt="Logo Ollyns" class="imageBottom w-auto h-24" />
+          <img :src="azarmi" alt="Logo Arasmis" class="imageBottom w-auto h-28" />
+          <img :src="baro" alt="Logo Baro" class="imageBottom w-auto h-28" />
+          <img :src="betto" alt="Logo Betto" class="imageBottom w-auto h-28" />
 
         </div>
 
@@ -36,6 +45,9 @@
           <img :src="valther" alt="Logo Valther" class="imageBottom w-auto h-28" />
           <img :src="vinci" alt="Logo Vinci" class="imageBottom w-auto h-28" />
           <img :src="vatier" alt="Logo Vatier" class="imageBottom w-auto h-28" />
+          <img :src="bonifassi" alt="Logo Bonifassi" class="imageBottom w-auto h-28"/>
+          <img :src="lamartine" alt="Logo Lamartine" class="imageBottom w-auto h-28"/>
+          <img :src="flichy" alt="Logo Flichy" class="imageBottom w-auto h-28" />
 
         </div>
       </div>
@@ -90,7 +102,7 @@ export default {
 }
 .wrapperContainerTop  .imagesContainer {
   white-space: nowrap;
-  animation: slideLeft 40s infinite linear;
+  animation: slideLeft 30s infinite linear;
 }
 
 
@@ -106,7 +118,7 @@ export default {
 
 .wrapperContainerBottom  .imagesContainerBottom {
   white-space: nowrap;
-  animation: slideLeft 40s infinite linear reverse;
+  animation: slideLeft 30s infinite linear reverse;
 }
 
 
