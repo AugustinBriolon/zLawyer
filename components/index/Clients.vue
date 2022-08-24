@@ -9,25 +9,13 @@
           <img :src="azarmi" alt="Logo Arasmis" class="image w-auto h-28" />
           <img :src="baro" alt="Logo Baro" class="image w-auto h-28" />
           <img :src="betto" alt="Logo Betto" class="image w-auto h-28" />
-          <img
-            :src="bonifassi"
-            alt="Logo Bonifassi"
-            class="image w-auto h-28"
-          />
-          <img :src="flichy" alt="Logo Flichy" class="image w-auto h-28" />
 
         </div>
 
         <div class="imagesContainer w-full flex items-center justify-between">
 
-          <img :src="azarmi" alt="Logo Arasmis" class="image w-auto h-28" />
-          <img :src="baro" alt="Logo Baro" class="image w-auto h-28" />
-          <img :src="betto" alt="Logo Betto" class="image w-auto h-28" />
-          <img
-            :src="bonifassi"
-            alt="Logo Bonifassi"
-            class="image w-auto h-28"
-          />
+          <img :src="bonifassi" alt="Logo Bonifassi" class="image w-auto h-28"/>
+          <img :src="lamartine" alt="Logo Lamartine" class="image w-auto h-28"/>
           <img :src="flichy" alt="Logo Flichy" class="image w-auto h-28" />
 
         </div>
@@ -37,22 +25,8 @@
 
         <div class="imagesContainerBottom w-full flex items-center justify-between">
 
-          <img
-            :src="bonilfassi"
-            alt="Logo Bonilfassi"
-            class="imageBottom w-auto h-28"
-          />
-          <img
-            :src="lamartine"
-            alt="Logo Lamartine"
-            class="imageBottom w-auto h-28"
-          />
           <img :src="lombard" alt="Logo Lombard" class="imageBottom w-auto h-28" />
-          <img
-            :src="navacelle"
-            alt="Logo Navacelle"
-            class="imageBottom w-auto h-28"
-          />
+          <img :src="navacelle" alt="Logo Navacelle" class="imageBottom w-auto h-28"/>
           <img :src="ollyns" alt="Logo Ollyns" class="imageBottom w-auto h-24" />
 
         </div>
@@ -60,10 +34,8 @@
         <div class="imagesContainerBottom w-full flex items-center justify-between">
 
           <img :src="valther" alt="Logo Valther" class="imageBottom w-auto h-28" />
-          <img :src="lombard" alt="Logo Lombard" class="imageBottom w-auto h-28" />
-          <img :src="flichy" alt="Logo Flichy" class="image w-auto h-28" />
+          <img :src="vinci" alt="Logo Vinci" class="imageBottom w-auto h-28" />
           <img :src="vatier" alt="Logo Vatier" class="imageBottom w-auto h-28" />
-          <img :src="azarmi" alt="Logo Azarmi" class="imageBottom w-auto h-28" />
 
         </div>
       </div>
@@ -132,7 +104,7 @@ export default {
   overflow: hidden;
 }
 
-.wrapperContainerBottom  .imagesContainer {
+.wrapperContainerBottom  .imagesContainerBottom {
   white-space: nowrap;
   animation: slideRight 40s infinite linear reverse;
 }
