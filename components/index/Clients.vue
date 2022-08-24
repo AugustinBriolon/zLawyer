@@ -4,7 +4,6 @@
       <h2 class="text-orange">Ils nous font confiance</h2>
 
       <div class="wrapperContainerTop">
-
         <div class="imagesContainer w-full flex items-center justify-between">
 
           <img :src="azarmi" alt="Logo Arasmis" class="image w-auto h-28" />
@@ -111,6 +110,8 @@ export default {
 <style scoped>
 .wrapperContainerTop {
   padding-top: 40px;
+  display: flex;
+  align-items: center;
   flex-wrap: nowrap;
   white-space: nowrap;
   overflow: hidden;
@@ -124,12 +125,14 @@ export default {
 .wrapperContainerBottom {
   padding-top: 150px;
   margin-bottom: 65px;
+  display: flex;
+  align-items: center;
   flex-wrap: nowrap;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.wrapperContainerBottom  .imagesContainerBottom {
+.wrapperContainerBottom  .imagesContainer {
   white-space: nowrap;
   animation: slideRight 40s infinite linear reverse;
 }
