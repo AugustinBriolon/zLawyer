@@ -3,7 +3,7 @@
         <h2 class="mb-20">Témoignages</h2>
 
         <!-- Slider Container  -->
-        <div class="slider-testimonials flex gap-10" ref="sliderContainer" :style="slider">
+        <div class="slider-testimonials overflow-scroll px-4 py-8 flex gap-10" ref="sliderContainer" :style="slider">
 
             <!-- Card Testimonials Client -->
             <div class="card-testimonial" ref="sliderCard">
@@ -89,12 +89,6 @@
             </div>
 
         </div>
-
-        <div class="flex justify-center gap-20 mt-10">
-            <img @click="slideLeft()" class="cursor-pointer" :src="arrowLeft" alt="fleche de direction slider">
-            <img @click="slideRight()" class="cursor-pointer" :src="arrowRight" alt="fleche de direction slider">
-        </div>
-
     </div>
 </template>
 
@@ -124,51 +118,17 @@ export default {
             clientLogo5,
             clientLogo6,
             clientLogo7,
-
-            // Slider
-            counter: 0,
-            cardWidth: 0,
         }
     },
-    methods:{
-        // Function to slide Right
-        slideRight: function () {
-            this.counter ++
-            if (this.counter >= this.$refs.sliderContainer.children.length) {
-                this.counter = 0;
-                this.cardWidth = 0;
-            } else {
-                this.cardWidth = this.$refs.sliderCard.offsetWidth;
-                this.cardWidth = (this.cardWidth + 40) * this.counter;
-            }
-        },
-        // Function to slide Left
-        slideLeft: function () {
-            this.counter --
-            if (this.counter <= -1) {
-                this.counter = this.$refs.sliderContainer.children.length;
-                this.cardWidth = this.$refs.sliderCard.offsetWidth;
-                this.cardWidth = ((this.cardWidth + 40) * this.counter) - (this.cardWidth + 40);
-            } else {
-                this.cardWidth = this.$refs.sliderCard.offsetWidth;
-                this.cardWidth = (this.cardWidth + 40) * this.counter;
-            }
-        },
-    },
-    computed: {
-        // Style to slide the card
-        slider() {
-            return {
-                transform : `translateX(-${this.cardWidth}px)`,
-                transition: "transform .5s ease-in-out",
-            };
-        },
-    },
+    methods: {},
 };
 
 </script>
 
 <style scoped>
+    .slider-testimonials::-webkit-scrollbar {
+    display: none;
+    }
     .card-testimonial{
         flex-shrink: 0;
         width: 38vw;

@@ -184,7 +184,7 @@ export default {
         .card-features{
             grid-template-columns: 1fr;
         }
-        .card-features.card-features-invert img{
+        .card-features.card-features-invert .container-image-features{
             grid-row-start: 1;
         }
     }
