@@ -5,33 +5,33 @@
 
       <div class="wrapperContainerTop">
         <div class="imagesContainer w-full flex items-center justify-between">
-          <img :src="azarmi" alt="Logo Arasmis" class="image w-40 h-28" />
-          <img :src="baro" alt="Logo Baro" class="image w-40 h-28" />
-          <img :src="betto" alt="Logo Betto" class="image w-40 h-28" />
-          <img :src="valther" alt="Logo Valther" class="image w-40 h-28" />
-          <img :src="vinci" alt="Logo Vinci" class="image w-40 h-28" />
-          <img :src="vatier" alt="Logo Vatier" class="image w-40 h-28" />
-          <img :src="bonifassi" alt="Logo Bonifassi" class="image w-40 h-28" />
-          <img :src="lamartine" alt="Logo Lamartine" class="image w-40 h-28" />
-          <img :src="flichy" alt="Logo Flichy" class="image w-40 h-28" />
-          <img :src="lombard" alt="Logo Lombard" class="image w-40 h-28" />
-          <img :src="navacelle" alt="Logo Navacelle" class="image w-40 h-28" />
-          <img :src="ollyns" alt="Logo Ollyns" class="image w-40 h-24" />
+          <img :src="azarmi" alt="Logo Arasmis" class="image h-28" />
+          <img :src="baro" alt="Logo Baro" class="image h-28" />
+          <img :src="betto" alt="Logo Betto" class="image h-28" />
+          <img :src="valther" alt="Logo Valther" class="image h-28" />
+          <img :src="vinci" alt="Logo Vinci" class="image h-28" />
+          <img :src="vatier" alt="Logo Vatier" class="image h-28" />
+          <img :src="bonifassi" alt="Logo Bonifassi" class="image h-28" />
+          <img :src="lamartine" alt="Logo Lamartine" class="image h-28" />
+          <img :src="flichy" alt="Logo Flichy" class="image h-28" />
+          <img :src="lombard" alt="Logo Lombard" class="image h-28" />
+          <img :src="navacelle" alt="Logo Navacelle" class="image h-28" />
+          <img :src="ollyns" alt="Logo Ollyns" class="image h-24" />
         </div>
 
         <div class="imagesContainer w-full flex items-center justify-between">
-          <img :src="azarmi" alt="Logo Arasmis" class="image w-40 h-28" />
-          <img :src="baro" alt="Logo Baro" class="image w-40 h-28" />
-          <img :src="betto" alt="Logo Betto" class="image w-40 h-28" />
-          <img :src="valther" alt="Logo Valther" class="image w-40 h-28" />
-          <img :src="vinci" alt="Logo Vinci" class="image w-40 h-28" />
-          <img :src="vatier" alt="Logo Vatier" class="image w-40 h-28" />
-          <img :src="bonifassi" alt="Logo Bonifassi" class="image w-40 h-28" />
-          <img :src="lamartine" alt="Logo Lamartine" class="image w-40 h-28" />
-          <img :src="flichy" alt="Logo Flichy" class="image w-40 h-28" />
-          <img :src="lombard" alt="Logo Lombard" class="image w-40 h-28" />
-          <img :src="navacelle" alt="Logo Navacelle" class="image w-40 h-28" />
-          <img :src="ollyns" alt="Logo Ollyns" class="image w-40 h-24" />
+          <img :src="ollyns" alt="Logo Ollyns" class="image h-24" />
+          <img :src="navacelle" alt="Logo Navacelle" class="image h-28" />
+          <img :src="lombard" alt="Logo Lombard" class="image h-28" />
+          <img :src="flichy" alt="Logo Flichy" class="image h-28" />
+          <img :src="bonifassi" alt="Logo Bonifassi" class="image h-28" />
+          <img :src="vatier" alt="Logo Vatier" class="image h-28" />
+          <img :src="vinci" alt="Logo Vinci" class="image h-28" />
+          <img :src="valther" alt="Logo Valther" class="image h-28" />
+          <img :src="lamartine" alt="Logo Lamartine" class="image h-28" />
+          <img :src="betto" alt="Logo Betto" class="image h-28" />
+          <img :src="baro" alt="Logo Baro" class="image h-28" />
+          <img :src="azarmi" alt="Logo Arasmis" class="image h-28" />
         </div>
       </div>
 
@@ -39,75 +39,35 @@
         <div
           class="imagesContainerBottom w-full flex items-center justify-between"
         >
-          <img
-            :src="lombard"
-            alt="Logo Lombard"
-            class="imageBottom w-40 h-28"
-          />
-          <img
-            :src="navacelle"
-            alt="Logo Navacelle"
-            class="imageBottom w-40 h-28"
-          />
-          <img :src="ollyns" alt="Logo Ollyns" class="imageBottom w-40 h-24" />
-          <img :src="azarmi" alt="Logo Arasmis" class="imageBottom w-40 h-28" />
-          <img :src="baro" alt="Logo Baro" class="imageBottom w-40 h-28" />
-          <img :src="betto" alt="Logo Betto" class="imageBottom w-40 h-28" />
-          <img
-            :src="valther"
-            alt="Logo Valther"
-            class="imageBottom w-40 h-28"
-          />
-          <img :src="vinci" alt="Logo Vinci" class="imageBottom w-40 h-28" />
-          <img :src="vatier" alt="Logo Vatier" class="imageBottom w-40 h-28" />
-          <img
-            :src="bonifassi"
-            alt="Logo Bonifassi"
-            class="imageBottom w-40 h-28"
-          />
-          <img
-            :src="lamartine"
-            alt="Logo Lamartine"
-            class="imageBottom w-40 h-28"
-          />
-          <img :src="flichy" alt="Logo Flichy" class="imageBottom w-40 h-28" />
+          <img :src="lombard" alt="Logo Lombard" class="imageBottom h-28" />
+          <img :src="navacelle" alt="Logo Navacelle" class="imageBottom h-28" />
+          <img :src="ollyns" alt="Logo Ollyns" class="imageBottom h-24" />
+          <img :src="azarmi" alt="Logo Arasmis" class="imageBottom h-28" />
+          <img :src="baro" alt="Logo Baro" class="imageBottom h-28" />
+          <img :src="betto" alt="Logo Betto" class="imageBottom h-28" />
+          <img :src="valther" alt="Logo Valther" class="imageBottom h-28" />
+          <img :src="vinci" alt="Logo Vinci" class="imageBottom h-28" />
+          <img :src="vatier" alt="Logo Vatier" class="imageBottom h-28" />
+          <img :src="bonifassi" alt="Logo Bonifassi" class="imageBottom h-28" />
+          <img :src="lamartine" alt="Logo Lamartine" class="imageBottom h-28" />
+          <img :src="flichy" alt="Logo Flichy" class="imageBottom h-28" />
         </div>
 
         <div
           class="imagesContainerBottom w-full flex items-center justify-between"
         >
-          <img
-            :src="lombard"
-            alt="Logo Lombard"
-            class="imageBottom w-40 h-28"
-          />
-          <img
-            :src="navacelle"
-            alt="Logo Navacelle"
-            class="imageBottom w-40 h-28"
-          />
-          <img :src="ollyns" alt="Logo Ollyns" class="imageBottom w-40 h-24" />
-          <img :src="azarmi" alt="Logo Arasmis" class="imageBottom w-40 h-28" />
-          <img :src="baro" alt="Logo Baro" class="imageBottom w-40 h-28" />
-          <img :src="betto" alt="Logo Betto" class="imageBottom w-40 h-28" />
-          <img
-            :src="valther"
-            alt="Logo Valther"
-            class="imageBottom w-40 h-28"
-          />
-          <img :src="vinci" alt="Logo Vinci" class="imageBottom w-40 h-28" />
-          <img :src="vatier" alt="Logo Vatier" class="imageBottom w-40 h-28" />
-          <img
-            :src="bonifassi"
-            alt="Logo Bonifassi"
-            class="imageBottom w-40 h-28"
-          />
-          <img
-            :src="lamartine"
-            alt="Logo Lamartine"
-            class="imageBottom w-40 h-28"
-          />
-          <img :src="flichy" alt="Logo Flichy" class="imageBottom w-40 h-28" />
+          <img :src="lombard" alt="Logo Lombard" class="imageBottom h-28" />
+          <img :src="navacelle" alt="Logo Navacelle" class="imageBottom h-28" />
+          <img :src="flichy" alt="Logo Flichy" class="imageBottom h-28" />
+          <img :src="lamartine" alt="Logo Lamartine" class="imageBottom h-28" />
+          <img :src="betto" alt="Logo Betto" class="imageBottom h-28" />
+          <img :src="valther" alt="Logo Valther" class="imageBottom h-28" />
+          <img :src="vinci" alt="Logo Vinci" class="imageBottom h-28" />
+          <img :src="vatier" alt="Logo Vatier" class="imageBottom h-28" />
+          <img :src="bonifassi" alt="Logo Bonifassi" class="imageBottom h-28" />
+          <img :src="baro" alt="Logo Baro" class="imageBottom h-28" />
+          <img :src="azarmi" alt="Logo Arasmis" class="imageBottom h-28" />
+          <img :src="ollyns" alt="Logo Ollyns" class="imageBottom h-24" />
         </div>
       </div>
     </div>
@@ -161,7 +121,7 @@ export default {
 }
 .wrapperContainerTop .imagesContainer {
   white-space: nowrap;
-  animation: slideLeft 40s infinite linear;
+  animation: slideLeft 60s infinite linear;
 }
 
 .wrapperContainerBottom {
@@ -176,7 +136,7 @@ export default {
 
 .wrapperContainerBottom .imagesContainerBottom {
   white-space: nowrap;
-  animation: slideLeft 40s infinite linear reverse;
+  animation: slideLeft 60s infinite linear reverse;
 }
 
 @keyframes slideLeft {
@@ -184,16 +144,16 @@ export default {
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-200%, 0, 0);
   }
 }
 
 @media screen and (max-width: 600px) {
   .wrapperContainerBottom .imagesContainerBottom {
-    animation: slideLeft 20s infinite linear reverse;
+    animation: slideLeft 40s infinite linear reverse;
   }
   .wrapperContainerTop .imagesContainer {
-    animation: slideLeft 20s infinite linear;
+    animation: slideLeft 40s infinite linear;
   }
 }
 </style>
