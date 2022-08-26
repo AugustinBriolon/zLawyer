@@ -67,7 +67,7 @@
           <img :src="bonifassi" alt="Logo Bonifassi" class="imageBottom h-28" />
           <img :src="baro" alt="Logo Baro" class="imageBottom h-28" />
           <img :src="azarmi" alt="Logo Arasmis" class="imageBottom h-28" />
-          <img :src="ollyns" alt="Logo Ollyns" class="imageBottom h-24" />
+          <!-- <img :src="ollyns" alt="Logo Ollyns" class="imageBottom h-24" /> -->
         </div>
       </div>
     </div>
@@ -156,4 +156,28 @@ export default {
     animation: slideLeft 40s infinite linear;
   }
 }
+
+@media screen and (max-width: 450px) {
+
+  @keyframes slideLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-400%, 0, 0);
+  }
+}
+
+  .wrapperContainerBottom {
+    padding-top: 80px;
+    margin-bottom: 0;
+  }
+  .wrapperContainerBottom .imagesContainerBottom {
+    animation: slideLeft 20s infinite linear reverse;
+  }
+  .wrapperContainerTop .imagesContainer {
+    animation: slideLeft 20s infinite linear;
+  }
+}
+
 </style>
