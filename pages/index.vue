@@ -1,12 +1,12 @@
 <template>
   <div>
-    <!-- <Header class="fixed" />
+    <Header class="fixed" />
     <Hero />
     <Reviews />
     <Advantages />
     <Adaptive />
     <Features />
-    <Infos /> -->
+    <Infos />
     <Testimonials />
     <Clients />
     <Pricing />
