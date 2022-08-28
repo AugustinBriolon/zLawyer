@@ -11,7 +11,7 @@
     <Clients />
     <Pricing />
     <Footer />
-    <!-- <cookie-law>
+    <cookie-law>
       <div slot-scope="props" class="cookies-container">
         <p>Nous utilisons les <nuxt-link class="text-link" to="/politique-de-cookies">cookies</nuxt-link> pour vous garantir la meilleure expérience.</p>
         <div>
@@ -19,7 +19,7 @@
           <button class="button-orange" @click="props.close"><span>Ignorer</span></button>
         </div>
       </div>
-    </cookie-law> -->
+    </cookie-law>
   </div>
 </template>
 
@@ -36,7 +36,7 @@ import Testimonials from "../components/index/Testimonials.vue";
 import Infos from "../components/index/Infos.vue";
 import Pricing from "../components/index/Pricing.vue";
 import Footer from "../components/Footer.vue";
-// import CookieLaw from 'vue-cookie-law';
+import CookieLaw from 'vue-cookie-law';
 
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -55,7 +55,7 @@ export default {
     Infos,
     Pricing,
     Footer,
-    // CookieLaw
+    CookieLaw
   },
   mounted() {
     let animFromTop = gsap.utils.toArray('.anim-from-top')
