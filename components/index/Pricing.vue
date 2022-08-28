@@ -2,7 +2,7 @@
     <div class="max-width-blue-section flex flex-col items-center">
         <h2 class="mb-10 text-center">Commencez dès Aujourd'hui</h2>
 
-        <div class="card-pricing w-full sm:w-max p-8 lg:p-20 flex flex-col items-center bg-white rounded-radius-current">
+        <div class="anim-from-top card-pricing w-full sm:w-max p-8 lg:p-20 flex flex-col items-center bg-white rounded-radius-current">
 
           <div class="flex flex-col items-center sm:flex-row sm:justify-around">
 

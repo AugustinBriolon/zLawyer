@@ -4,7 +4,7 @@
         <p class="subtitle md:w-2/3 xl:w-1/2">zLawyer a été conçu en étroite <span class="text-bolder">collaboration avec des avocats</span>, garantissant des <span class="text-bolder">fonctionnalités</span> et une <span class="text-bolder">ergonomie</span> qui répondent précisément aux exigences des cabinets de petites et grandes tailles.</p>
 
         <!-- Card Features Facturation -->
-        <div class="md:px-8">
+        <div class="anim-from-top  md:px-8">
             <div class="card-features">
                 <div ref="popIn1" class="container-image-features" @click="openPopIn('popIn1')">
                     <img class="close-pop-in" :src="cross">
@@ -20,7 +20,7 @@
         </div>
 
         <!-- Card Features Phone -->
-        <div class="md:px-8">
+        <div class="anim-from-top  md:px-8">
             <div class="card-features card-features-invert">
                 <div class="card-features-description">
                     <h3><span class="text-underline">L’application</span> zLawyer Iphone et Android</h3>
@@ -37,7 +37,7 @@
         </div>
 
         <!-- Card Features Gestion -->
-        <div class="md:px-8">
+        <div class="anim-from-top  md:px-8">
             <div class="card-features">
                 <div ref="popIn3" class="container-image-features" @click="openPopIn('popIn3')">
                     <img class="close-pop-in" :src="cross">
@@ -53,7 +53,7 @@
         </div>
 
         <!-- Card Features Dossiers -->
-        <div class="md:px-8">
+        <div class="anim-from-top  md:px-8">
             <div class="card-features card-features-invert">
                 <div class="card-features-description">
                     <h3><span class="text-underline">Dossiers</span> : l’information à portée de main</h3>
@@ -70,7 +70,7 @@
         </div>
 
         <!-- Card Features Essentiel -->
-        <div class="md:px-8">
+        <div class="anim-from-top  md:px-8">
             <div class="card-features">
                 <div ref="popIn5" class="container-image-features" @click="openPopIn('popIn5')">
                     <img class="close-pop-in" :src="cross">
@@ -86,7 +86,7 @@
         </div>
 
         <!-- Card Features Capture -->
-        <div class="md:px-8">
+        <div class="anim-from-top  md:px-8">
             <div class="card-features card-features-invert">
                 <div class="card-features-description">
                     <h3><span class="text-underline">La capture</span> du temps qui passe</h3>
@@ -102,7 +102,7 @@
         </div>
 
         <!-- Card Features Clients -->
-        <div class="md:px-8">
+        <div class="anim-from-top  md:px-8">
             <div class="card-features">
                 <div ref="popIn7" class="container-image-features" @click="openPopIn('popIn7')">
                     <img class="close-pop-in" :src="cross">
