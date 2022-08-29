@@ -6,86 +6,13 @@
         <div class="slider-testimonials flex gap-10" ref="sliderContainer" :style="slider">
 
             <!-- Card Testimonials Client -->
-            <div class="card-testimonial" ref="sliderCard">
+            <div class="card-testimonial" v-for="(item,i) in items" ref="sliderCard">
                 <img class="quote" :src="quoteLogo" alt="checkIcon">
-                <img class="logo-client" :src="clientLogo1" alt="logo des clients">
+                <img class="logo-client" :src="item.logo" alt="logo des clients">
                 <div class="pl-2 border-l-2 border-blue">
-                    <p>Un logiciel de gestion est indispensable à tout avocat, autant choisir le meilleur !</p>
+                    <p>{{ item.decription }}</p>
                 </div>
-                <p class="client-sign"><span class="text-bolder">Mme Christophe Thevenet, Avocat.</span><br>
-                Librato Avocats</p>
-            </div>
-
-            <!-- Card Testimonials Client -->
-            <div class="card-testimonial">
-                <img class="quote" :src="quoteLogo" alt="checkIcon">
-                <img class="logo-client" :src="clientLogo2" alt="logo des clients">
-                <div class="pl-2 border-l-2 border-blue">
-                    <p>Après avoir fait une analyse des logiciels disponibles pour les cabinets d’avocats, nous avons choisi zLawyer car c’est celui qui nous a paru le plus complet et le plus intuitif d’utilisation.</p>
-                    <br>
-                    <p>Après quelques mois d’utilisation, on peut dire que zLawyer à l’épreuve du terrain répond complètement à notre attente.</p>
-                </div>
-                <p class="client-sign"><span class="text-bolder">Me Thierry Marembert, Avocat.</span><br>
-                Kiejman & Marembert Avocats</p>
-            </div>
-
-            <!-- Card Testimonials Client -->
-            <div class="card-testimonial">
-                <img class="quote" :src="quoteLogo" alt="checkIcon">
-                <img class="logo-client" :src="clientLogo3" alt="logo des clients">
-                <div class="pl-2 border-l-2 border-blue">
-                    <p>Le logiciel zLawyer ? en un mot ? ...la FACILITE !" C'est une solution très agréable et très simple. Il nous est devenu indispensable et il ne tombe jamais en panne.</p>
-                </div>
-                <p class="client-sign"><span class="text-bolder">Me Benoît Gruau, Avocat.</span><br>
-                Richelieu Avocats</p>
-            </div>
-
-            <!-- Card Testimonials Client -->
-            <div class="card-testimonial">
-                <img class="quote" :src="quoteLogo" alt="checkIcon">
-                <img class="logo-client" :src="clientLogo4" alt="logo des clients">
-                <div class="pl-2 border-l-2 border-blue">
-                    <p>C’est sans conteste le meilleur logiciel de facturation et de gestion et le plus easy-using avec une équipe hyper professionnelle et hyper réactive.</p>
-                    <br>
-                    <p>Nous utilisons ZL depuis 7 ans et nous n’avons jamais rencontré aucun problème.</p>
-                </div>
-                <p class="client-sign"><span class="text-bolder">Me Valérie Goffinon, Secrétaire Général.</span><br>
-                Sekri Valentin Zerouk Avocats</p>
-            </div>
-
-            <!-- Card Testimonials Client -->
-            <div class="card-testimonial">
-                <img class="quote" :src="quoteLogo" alt="checkIcon">
-                <img class="logo-client" :src="clientLogo5" alt="logo des clients">
-                <div class="pl-2 border-l-2 border-blue">
-                    <p>Cela va bientôt faire 10 ans que nous utilisons Z. Un logiciel ergonomique, convivial et d’une simplicité de déploiement et d’utilisation appréciée par l’ensemble de notre équipe. A recommander les yeux fermés.</p>
-                </div>
-                <p class="client-sign"><span class="text-bolder">Me David Guillouet, Avocat.</span><br>
-                Voltaire Avocats</p>
-            </div>
-
-            <!-- Card Testimonials Client -->
-            <div class="card-testimonial">
-                <img class="quote" :src="quoteLogo" alt="checkIcon">
-                <img class="logo-client" :src="clientLogo6" alt="logo des clients">
-                <div class="pl-2 border-l-2 border-blue">
-                    <p>J’utilise zLawyer depuis des années. Cet outil me permet de facturer en deux clics et d’obtenir une analyse détaillée de la rentabilité de mes dossiers.</p>
-                    <br>
-                    <p>En plus de cela, l’équipe dédiée au super est vraiment très réactive. Je recommande à 200% !</p>
-                </div>
-                <p class="client-sign"><span class="text-bolder">Me Thomas Cuq, Avocat.</span><br>
-                Ad Hoc Avocats</p>
-            </div>
-
-            <!-- Card Testimonials Client -->
-            <div class="card-testimonial">
-                <img class="quote" :src="quoteLogo" alt="checkIcon">
-                <img class="logo-client" :src="clientLogo7" alt="logo des clients">
-                <div class="pl-2 border-l-2 border-blue">
-                    <p>J’utilise zLawyer depuis plusieurs années. Il est devenu un outil de facturation incontournable au sein du cabinet. Le vrai plus, une équipe à l’écoute de ses clients et très réactive.</p>
-                </div>
-                <p class="client-sign"><span class="text-bolder">Me Nacime Tobni, Avocat.</span><br>
-                Advance Avocats</p>
+                <p class="client-sign"><span class='text-bolder'>{{ item.client }}</span><br>{{ item.cabinet }}</p>
             </div>
 
         </div>
@@ -113,6 +40,10 @@ import clientLogo7 from "../../assets/images/testimonials/advanceAvocats.png";
 export default {
     data: function () {
         return {
+            // Slider
+            counter: 0,
+            cardWidth: 0,
+
             // Images
             arrowLeft,
             arrowRight,
@@ -125,9 +56,50 @@ export default {
             clientLogo6,
             clientLogo7,
 
-            // Slider
-            counter: 0,
-            cardWidth: 0,
+            items: [
+                {
+                    logo: clientLogo1,
+                    decription: "Un logiciel de gestion est indispensable à tout avocat, autant choisir le meilleur !",
+                    client: "Mme Christophe Thevenet, Avocat.",
+                    cabinet: "Librato Avocats",
+                },
+                {
+                    logo: clientLogo2,
+                    decription: "Après avoir fait une analyse des logiciels disponibles pour les cabinets d’avocats, nous avons choisi zLawyer car c’est celui qui nous a paru le plus complet et le plus intuitif d’utilisation. Après quelques mois d’utilisation, on peut dire que zLawyer à l’épreuve du terrain répond complètement à notre attente.",
+                    client: "Me Thierry Marembert, Avocat.",
+                    cabinet: "Kiejman & Marembert Avocats",
+                },
+                {
+                    logo: clientLogo3,
+                    decription: "Le logiciel zLawyer ? en un mot ? ...la FACILITE ! C'est une solution très agréable et très simple. Il nous est devenu indispensable et il ne tombe jamais en panne.",
+                    client: "Me Benoît Gruau, Avocat.",
+                    cabinet: "Richelieu Avocats",
+                },
+                {
+                    logo: clientLogo4,
+                    decription: "C’est sans conteste le meilleur logiciel de facturation et de gestion et le plus easy-using avec une équipe hyper professionnelle et hyper réactive. Nous utilisons ZL depuis 7 ans et nous n’avons jamais rencontré aucun problème.",
+                    client: "Me Valérie Goffinon, Secrétaire Général.",
+                    cabinet: "Sekri Valentin Zerouk Avocats",
+                },
+                {
+                    logo: clientLogo5,
+                    decription: "Cela va bientôt faire 10 ans que nous utilisons Z. Un logiciel ergonomique, convivial et d’une simplicité de déploiement et d’utilisation appréciée par l’ensemble de notre équipe. A recommander les yeux fermés.",
+                    client: "Me David Guillouet, Avocat.",
+                    cabinet: "Voltaire Avocats",
+                },
+                {
+                    logo: clientLogo6,
+                    decription: "J’utilise zLawyer depuis des années. Cet outil me permet de facturer en deux clics et d’obtenir une analyse détaillée de la rentabilité de mes dossiers. En plus de cela, l’équipe dédiée au super est vraiment très réactive. Je recommande à 200% !",
+                    client: "Me Thomas Cuq, Avocat.",
+                    cabinet: "Ad Hoc Avocats",
+                },
+                {
+                    logo: clientLogo7,
+                    decription: "J’utilise zLawyer depuis plusieurs années. Il est devenu un outil de facturation incontournable au sein du cabinet. Le vrai plus, une équipe à l’écoute de ses clients et très réactive.",
+                    client: "Me Nacime Tobni, Avocat.",
+                    cabinet: "Advance Avocats",
+                },
+            ],
         }
     },
     methods:{
@@ -138,7 +110,7 @@ export default {
                 this.counter = 0;
                 this.cardWidth = 0;
             } else {
-                this.cardWidth = this.$refs.sliderCard.offsetWidth;
+                this.cardWidth = this.$refs.sliderCard[0].offsetWidth;
                 this.cardWidth = (this.cardWidth + 40) * this.counter;
             }
         },
@@ -147,10 +119,10 @@ export default {
             this.counter --
             if (this.counter <= -1) {
                 this.counter = this.$refs.sliderContainer.children.length;
-                this.cardWidth = this.$refs.sliderCard.offsetWidth;
+                this.cardWidth = this.$refs.sliderCard[0].offsetWidth;
                 this.cardWidth = ((this.cardWidth + 40) * this.counter) - (this.cardWidth + 40);
             } else {
-                this.cardWidth = this.$refs.sliderCard.offsetWidth;
+                this.cardWidth = this.$refs.sliderCard[0].offsetWidth;
                 this.cardWidth = (this.cardWidth + 40) * this.counter;
             }
         },

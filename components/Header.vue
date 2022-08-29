@@ -2,7 +2,7 @@
     <div class="header-container">
         <div class="header mx-auto h-24 flex items-center justify-between px-8 py-6 w-full">
             
-            <NuxtLink to="/"><img :src="zeleLogo1" class="h-12 sm:h-16 cursor-pointer"/></NuxtLink>
+            <NuxtLink to="/"><img :src="zeleLogo" class="h-12 sm:h-16 cursor-pointer"/></NuxtLink>
 
             <ul class="items-center hidden xl:flex header-nav">
                 <li class="ml-10"><a class="text-link" href="/#solutions">Avantages</a></li>
@@ -36,9 +36,7 @@
 
 <script>
 
-    import zeleLogo from "../assets/images/logos/zeleLogo.svg";
-    import zeleLogo1 from "../assets/images/logos/zeleLogo1.svg";
-    import zeleLogo2 from "../assets/images/logos/zeleLogo2.svg";
+    import zeleLogo from "../assets/images/logos/zeleLogo.png";
     import Vue from 'vue'
     import VueAnalytics from 'vue-analytics'
 
@@ -52,8 +50,6 @@
             return {
                 isActive: false,
                 zeleLogo,
-                zeleLogo1,
-                zeleLogo2,
             }
         },
     }

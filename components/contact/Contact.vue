@@ -1,8 +1,5 @@
 <template>
   <div class="max-width-blue-section container-contact">
-        <p class="text-response" :class="[isSuccess ? 'text-green-600' : 'text-red-600']">
-      {{ response }}
-    </p>
     <div
       class="card-contact grid xl:grid-cols-2 grid-cols-1 overflow-hidden bg-transparent sm:bg-white mx-auto"
     >
@@ -97,6 +94,10 @@
       <div class="p-10">
         <h2 class="p-2">Contact</h2>
 
+        <p class="text-response" :class="[isSuccess ? 'text-green-600' : 'text-red-600']">
+        {{ response }}
+        </p>
+
         <form
           v-on:submit.prevent="onSubmit()"
           method="POST"
@@ -121,7 +122,6 @@
                 {{ pays }}
               </option>
             </select>
-            <!-- <input type="text" id="country" name="country" v-model="pays" /> -->
           </div>
 
           <div class="grid grid-cols-2">
@@ -166,13 +166,6 @@
           </div>
 
           <recaptcha />
-
-          <p
-            class="text-response"
-            :class="[isSuccess ? 'text-green-600' : 'text-red-600']"
-          >
-            {{ response }}
-          </p>
 
           <button type="submit" class="button-orange mx-2 my-10 w-max">
             Envoyer
@@ -276,13 +269,14 @@ export default {
 <style scoped>
 .container-contact {
   min-height: 950px;
-  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
+
 .card-contact {
+  margin: 120px 0;
   width: 80%;
   border-radius: var(--radius-current);
   box-shadow: var(--shadow-current);

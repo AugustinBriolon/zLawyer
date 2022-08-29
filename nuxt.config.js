@@ -7,12 +7,18 @@ export default {
       lang: "fr",
     },
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
-      { name: "format-detection", content: "telephone=no" },
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'format-detection', content: 'telephone=no' },
+      // Open Graph
+      { property: 'og:title', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
+      { property: 'og:description', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
+      { property: 'og:image', content: '/ogImage.png' },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
     script: [
       {
         id: "ze-snippet",
@@ -33,8 +39,9 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    "@nuxtjs/tailwindcss",
-    "nuxt-gsap-module",
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/vuetify',
+    'nuxt-gsap-module',
   ],
 
   gsap: {

@@ -3,9 +3,9 @@
         <h2>Avantages</h2>
         <p class="subtitle md:w-2/3 xl:w-1/2">La puissance de zLawyer réside dans son parfait équilibre entre <span class="text-bolder">simplicité d’utilisation, richesse fonctionnelle et la qualité approuvée du service support.</span></p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:px-8">
+        <div class="container-solutions grid grid-cols-1 md:grid-cols-2 gap-6 md:px-8">
             <!-- Card Advantages Exhaustivité -->
-            <div class="card-advantages">
+            <div class="anim-advantages card-advantages">
                 <div class="card-advantages-head">
                     <h3>Exhaustivité</h3>
                     <svg class="logo-advantages" id="Groupe_2" data-name="Groupe 2" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
@@ -18,7 +18,7 @@
             </div>
 
             <!-- Card Advantages Service -->
-            <div class="card-advantages">
+            <div class="anim-advantages card-advantages">
                 <img class="panda-top hidden md:block absolute w-36" :src="pandaTop" alt="panda">
                 <div class="card-advantages-head">
                     <h3>Service</h3>
@@ -34,7 +34,7 @@
             </div>
 
             <!-- Card Advantages Facilité -->
-            <div class="card-advantages">
+            <div class="anim-advantages card-advantages">
                 <div class="card-advantages-head">
                     <h3>Facilité</h3>
                     <svg class="logo-advantages" id="Groupe_2" data-name="Groupe 2" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
@@ -49,7 +49,7 @@
             </div>
 
             <!-- Card Advantages Évolutif -->
-            <div class="card-advantages">
+            <div class="anim-advantages card-advantages">
                 <img class="panda-side hidden md:block absolute h-40" :src="pandaSide" alt="panda">
                 <div class="card-advantages-head">
                     <h3>Évolutif</h3>
@@ -67,21 +67,48 @@
 
 <script>
 
-    import pandaSide from "../../assets/images/pandas/pandaSide.png";
-    import pandaTop from "../../assets/images/pandas/pandaTop.png";
+import pandaSide from "../../assets/images/pandas/pandaSide.png";
+import pandaTop from "../../assets/images/pandas/pandaTop.png";
 
-    export default {
-        data: function() {
-            return {
-                pandaSide,
-                pandaTop,
-            }
-        },
-    };
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+export default {
+    data: function() {
+        return {
+            pandaSide,
+            pandaTop,
+        }
+    },
+    mounted() {
+        let animAdvantages = gsap.utils.toArray('.anim-advantages')
+        animAdvantages.forEach((item, index) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: ".container-solutions",
+            start:"top 50%",
+            toggleActions:"restart none none reverse",
+            end: "bottom 50%",
+            },
+        })
+        .to(item, {
+            opacity: 1,
+            y: 0,
+            duration: .5,
+        }).delay(index * .1)
+        })
+    }
+};
 
 </script>
 
 <style scoped>
+
+    .anim-advantages{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
     .card-advantages {
         box-shadow: 0px 0px 20px var(--color-blue);
         background-color: var(--color-white);
