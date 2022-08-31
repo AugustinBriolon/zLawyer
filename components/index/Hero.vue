@@ -6,9 +6,7 @@
         </div>
         <div class="container-img">
             <img class="anim-hero w-full" :src="illustrationHero" alt="illustration du logiciel">
-            <typewriter :replace="replace" :type-interval="20" :replace-interval="3000">
-                <p class="text-replace text-center text-2xl hidden lg:block">La solution la mieux notée par vos confrères !</p>
-            </typewriter>
+            <p class="text-replace text-center text-2xl hidden lg:block">La solution la mieux notée par vos confrères !</p>
         </div>
 
 
@@ -18,13 +16,9 @@
 <script>
 
 import illustrationHero from "../../assets/images/hero/illustrationHero.png";
-import Typewriter from "typewriter-vue";
 import { gsap } from "gsap";
 
 export default {
-    components: {
-        Typewriter,
-    },
     data: function() {
         return {
             illustrationHero,
