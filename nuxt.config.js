@@ -1,6 +1,9 @@
 export default {
   target: "static",
   ssr: false,
+  router: {
+    base: '/logiciel-avocats/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "zLawyer",
