@@ -54,7 +54,7 @@ a{
     background: var(--color-white);
 }
 .max-width-white-section-content{
-    max-width: 1920px;
+    max-width: 1920px !important;
     margin: 0 auto;
     padding: 80px clamp(20px, 5vw, 100px);
     overflow: hidden;

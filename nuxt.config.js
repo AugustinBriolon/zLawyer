@@ -71,7 +71,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    publicPath: "https://www.zlawyer.fr/logiciel-avocats/",
+    publicPath: "https://www.zlawyer.fr/",
     extend (config, ctx) {
       config.performance.maxAssetSize = 700 * 1024
     }

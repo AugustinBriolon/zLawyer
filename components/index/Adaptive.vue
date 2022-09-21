@@ -1,7 +1,7 @@
 <template>
     <div class="max-width-white-section">
         <div class="max-width-white-section-content text-center flex flex-col items-center container-adaptative">
-            <h2 class="anim-adaptative text-orange">zLawyer s’adapte a votre organisation</h2>
+            <h2 class="anim-adaptative text-orange">zLawyer s’adapte à votre organisation</h2>
             <p class="anim-adaptative my-2 w-3/4 xl:w-1/2">Que votre cabinet soit équipé d’un <span class="text-bolder">Nas</span>, d’un serveur ou encore d’un <span class="text-bolder">Cloud</span>, zLawyer <span class="text-bolder">s'adapte</span> parfaitement à <span class="text-bolder">votre organisation</span>. zLawyer est <span class="text-bolder">100% compatible</span> avec les technologies actuelles de stockage.</p>
 
             <div class="mt-4 flex flex-wrap items-center justify-center">
@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import googleDrive from "../../assets/images/adaptative/googleDriveLogo.svg"
-import oneDrive from "../../assets/images/adaptative/oneDriveLogo.svg"
+import googleDrive from "../../assets/images/adaptative/googleDriveLogo.png"
+import oneDrive from "../../assets/images/adaptative/oneDriveLogo.png"
 import synology from "../../assets/images/adaptative/synologyLogo.svg"
-import dropbox from "../../assets/images/adaptative/dropboxLogo.svg"
-import tresorit from "../../assets/images/adaptative/tresoritLogo.svg"
+import dropbox from "../../assets/images/adaptative/dropboxLogo.png"
+import tresorit from "../../assets/images/adaptative/tresoritLogo.png"
 import pcloud from "../../assets/images/adaptative/pcloudLogo.svg"
 
 import { gsap } from "gsap";
