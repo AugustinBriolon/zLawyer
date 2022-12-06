@@ -11,11 +11,15 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/recaptcha": "^1.1.1",
+    "autoprefixer": "^7",
     "axios": "^0.27.2",
     "core-js": "^3.15.1",
     "gsap": "^3.10.4",
     "h3": "^0.3.9",
     "nuxt": "^2.15.7",
+    "postcss-flexbugs-fixes": "^4",
+    "postcss-preset-env": "^7.8.3",
+    "tailwindcss": "^3.1.6",
     "vue-analytics": "^5.22.1"
   },
   "devDependencies": {
@@ -23,8 +27,11 @@
     "@nuxtjs/vuetify": "^1.12.3",
     "html-webpack-plugin": "^5.5.0",
     "nuxt-gsap-module": "^1.7.2",
-    "postcss": "^8.3.5",
+    "postcss": "^7",
     "sass-loader": "^10.1.1",
     "webpack": "^4.46.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }
