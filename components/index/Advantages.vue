@@ -19,7 +19,14 @@
 
             <!-- Card Advantages Service -->
             <div class="anim-advantages card-advantages">
-                <img class="panda-top hidden md:block absolute w-36" :src="pandaTop" alt="panda">
+                <picture>
+                    <source
+                    :srcset="pandaTopwebp"
+                    type="image/webp"
+                    class="panda-top hidden md:block absolute w-36"
+                    />
+                    <img class="panda-top hidden md:block absolute w-36" :src="pandaTop" alt="panda">
+                </picture>
                 <div class="card-advantages-head">
                     <h3>Service</h3>
                     <svg class="logo-advantages" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
@@ -44,13 +51,20 @@
                 </div>
                 <p>Sous la tutelle des utilisateurs eux-mêmes et afin de leur faire <span class="text-bolder">gagner du temps</span>, TOUT a été pensé dans cette solution pour avocat zLawyer pour être <span class="text-bolder">ultra simple d’utilisation</span> et <span class="text-bolder">intuitif</span>. De la saisie des temps en passant par la gestion des dossiers et évidemment l’émission de factures de la plus simple à la plus complexe, on comprend que ce sont les avocats eux-mêmes qui ont pensé l’outil pour leurs cabinets.
                 <br>
-                L’outil est <span class="text-bolder">personnalisable</span> afin de répondre à votre propre besoin et aller droit au but <span class="text-bolder">rapidement</span> et <span class="text-bolder">facilement</span>. 
+                L’outil est <span class="text-bolder">personnalisable</span> afin de répondre à votre propre besoin et aller droit au but <span class="text-bolder">rapidement</span> et <span class="text-bolder">facilement</span>.
                 </p>
             </div>
 
             <!-- Card Advantages Évolutif -->
             <div class="anim-advantages card-advantages">
-                <img class="panda-side hidden md:block absolute h-40" :src="pandaSide" alt="panda">
+              <picture>
+                <source
+                  :srcset="pandaSidewebp"
+                  type="image/webp"
+                  class="panda-side hidden md:block absolute h-40"
+                  />
+                  <img class="panda-side hidden md:block absolute h-40" :src="pandaSide" alt="panda">
+                </picture>
                 <div class="card-advantages-head">
                     <h3>Évolutif</h3>
                     <svg class="logo-advantages" id="Groupe_2" data-name="Groupe 2" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
@@ -58,7 +72,7 @@
                         <path id="Icon_awesome-balance-scale" data-name="Icon awesome-balance-scale" d="M11.466,15.049h0c0-.725.06-.391-3.809-8.13a2.152,2.152,0,0,0-3.846,0C-.092,14.725,0,14.348,0,15.049H0c0,1.979,2.567,3.583,5.733,3.583S11.466,17.028,11.466,15.049ZM5.733,7.883l3.225,6.45H2.508Zm22.932,7.166c0-.725.06-.391-3.809-8.13a2.152,2.152,0,0,0-3.846,0c-3.9,7.805-3.809,7.428-3.809,8.13h0c0,1.979,2.567,3.583,5.733,3.583s5.733-1.6,5.733-3.583Zm-8.957-.717,3.225-6.45,3.225,6.45Zm3.942,5.733H15.766V6.864A3.586,3.586,0,0,0,17.844,4.3h5.805a.716.716,0,0,0,.717-.717V2.15a.716.716,0,0,0-.717-.717H17.183a3.551,3.551,0,0,0-5.7,0H5.016A.716.716,0,0,0,4.3,2.15V3.583a.716.716,0,0,0,.717.717h5.805A3.586,3.586,0,0,0,12.9,6.864v13.2H5.016a.716.716,0,0,0-.717.717v1.433a.716.716,0,0,0,.717.717H23.649a.716.716,0,0,0,.717-.717V20.783A.716.716,0,0,0,23.649,20.066Z" transform="translate(12.667 15.534)" fill="#fff"/>
                     </svg>
                 </div>
-                <p>zLawyer est la simple <span class="text-bolder">traduction des besoins exprimés par les avocats</span> eux-mêmes. Conçu dès 2006 avec un pool d’avocats testeurs, zLawyer n’a été commercialisé qu’après 2 ans et ½ de <span class="text-bolder">Recherche et Développement</span> visant à vous fournir un <span class="text-bolder">software naturellement utile et en constante évolution</span>. Vous bénéficiez de nouvelles fonctionnalités régulièrement et sans impactes budgétaires sur votre abonnement. 
+                <p>zLawyer est la simple <span class="text-bolder">traduction des besoins exprimés par les avocats</span> eux-mêmes. Conçu dès 2006 avec un pool d’avocats testeurs, zLawyer n’a été commercialisé qu’après 2 ans et ½ de <span class="text-bolder">Recherche et Développement</span> visant à vous fournir un <span class="text-bolder">software naturellement utile et en constante évolution</span>. Vous bénéficiez de nouvelles fonctionnalités régulièrement et sans impactes budgétaires sur votre abonnement.
                 </p>
             </div>
         </div>
@@ -70,6 +84,11 @@
 import pandaSide from "../../assets/images/pandas/pandaSide.png";
 import pandaTop from "../../assets/images/pandas/pandaTop.png";
 
+//webp
+import pandaSidewebp from "../../assets/images/pandas/webp/pandaSide.webp";
+import pandaTopwebp from "../../assets/images/pandas/webp/pandaTop.webp";
+
+
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -79,6 +98,8 @@ export default {
         return {
             pandaSide,
             pandaTop,
+            pandaSidewebp,
+            pandaTopwebp,
         }
     },
     mounted() {

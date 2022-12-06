@@ -13,15 +13,29 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { name: 'msapplication-TileColor', content: '#da532c' },
+      { name: 'theme-color', content: '#ffffff' },
+      { hid: 'title', name: 'title', content: 'La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !'},
+      { hid: 'description', name: 'description', content: 'La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !' },
+
+
+      // Twitter
+      { hid: 't-type',name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
+      { name: 'twitter:description', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
+      { name: 'twitter:image', content: '/ogImage.png' },
+
       { name: 'format-detection', content: 'telephone=no' },
       // Open Graph
-      { property: 'og:title', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
-      { property: 'og:description', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
-      { property: 'og:image', content: '/ogImage.png' },
+      { hid: 'og-type',property: 'og:type', content: 'website' },
+      { hid: 'og-url',property: 'og:url', content: 'https://www.zlawyer.fr/logiciel-avocats/' },
+      { hid: 'og-title',property: 'og:title', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
+      { hid: 'og-desc',property: 'og:description', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
+      { hid: 'og-image',property: 'og:image', content: '/ogImage.png' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'canonical', href: 'https://www.zlawyer.fr/logiciel-avocats/' },
     ],
     script: [
       {

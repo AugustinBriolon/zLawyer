@@ -8,7 +8,14 @@
             <div class="card-features">
                 <div ref="popIn1" class="container-image-features" @click="openPopIn('popIn1')">
                     <img class="close-pop-in" :src="cross">
-                    <img class="image-features" :src="features1" alt="illustration de la fonctionnalitée facturation">
+                    <picture>
+                        <source
+                        :srcset="features1webp"
+                        type="image/webp"
+                        class="image-features"
+                        />
+                        <img class="image-features" :src="features1" alt="illustration de la fonctionnalitée facturation">
+                    </picture>
                 </div>
                 <div class="card-features-description">
                     <h3><span class="text-underline">Facturation</span> <br> Arbitrer & gérer la rentabilité</h3>
@@ -32,7 +39,14 @@
                     </div>
                 </div>
                 <!-- <img class="image-mobile" :src="features2" alt="illustration de l'application mobile" @click="e => e.target.classList.toggle('active')"> -->
-                <img class="image-mobile" :src="features2" alt="illustration de l'application mobile">
+                <picture>
+                    <source
+                    :srcset="features2webp"
+                    type="image/webp"
+                    class="image-mobile"
+                    />
+                    <img class="image-mobile" :src="features2" alt="illustration de l'application mobile">
+                </picture>
             </div>
         </div>
 
@@ -41,7 +55,14 @@
             <div class="card-features">
                 <div ref="popIn3" class="container-image-features" @click="openPopIn('popIn3')">
                     <img class="close-pop-in" :src="cross">
-                    <img class="image-features" :src="features3" alt="illustration de la fonctionnalitée gestion">
+                    <picture>
+                        <source
+                        :srcset="features3webp"
+                        type="image/webp"
+                        class="image-features"
+                        />
+                        <img class="image-features" :src="features3" alt="illustration de la fonctionnalitée gestion">
+                    </picture>
                 </div>
                 <div class="card-features-description">
                     <h3><span class="text-underline">Une gestion</span> documentaire sans contrainte</h3>
@@ -64,7 +85,14 @@
                 </div>
                 <div ref="popIn4" class="container-image-features" @click="openPopIn('popIn4')">
                     <img class="close-pop-in" :src="cross">
-                    <img class="image-features" :src="features4" alt="illustration de la fonctionnalitée dossiers">
+                    <picture>
+                        <source
+                        :srcset="features4webp"
+                        type="image/webp"
+                        class="image-features"
+                        />
+                        <img class="image-features" :src="features4" alt="illustration de la fonctionnalitée dossiers">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -74,7 +102,14 @@
             <div class="card-features">
                 <div ref="popIn5" class="container-image-features" @click="openPopIn('popIn5')">
                     <img class="close-pop-in" :src="cross">
-                    <img class="image-features" :src="features5" alt="illustration de la fonctionnalitée essentiel de l'application">
+                    <picture>
+                        <source
+                        :srcset="features5webp"
+                        type="image/webp"
+                        class="image-features"
+                        />
+                        <img class="image-features" :src="features5" alt="illustration de la fonctionnalitée essentiel de l'application">
+                    </picture>
                 </div>
                 <div class="card-features-description">
                     <h3><span class="text-underline">L’essentiel</span> en un coup d’oeil</h3>
@@ -96,7 +131,14 @@
                 </div>
                 <div ref="popIn6" class="container-image-features" @click="openPopIn('popIn6')">
                     <img class="close-pop-in" :src="cross">
-                    <img class="image-features" :src="features6" alt="illustration de la fonctionnalitée timer">
+                    <picture>
+                        <source
+                        :srcset="features6webp"
+                        type="image/webp"
+                        class="image-features"
+                        />
+                        <img class="image-features" :src="features6" alt="illustration de la fonctionnalitée timer">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -106,7 +148,14 @@
             <div class="card-features">
                 <div ref="popIn7" class="container-image-features" @click="openPopIn('popIn7')">
                     <img class="close-pop-in" :src="cross">
-                    <img class="image-features" :src="features7" alt="illustration de la fonctionnalitée accès client">
+                    <picture>
+                        <source
+                        :srcset="features7webp"
+                        type="image/webp"
+                        class="image-features"
+                        />
+                        <img class="image-features" :src="features7" alt="illustration de la fonctionnalitée accès client">
+                    </picture>
                 </div>
                 <div class="card-features-description">
                     <h3>Donnez à vos clients <span class="text-underline">un accès à leur dossier</span> sur le web.</h3>
@@ -135,6 +184,15 @@ import features7 from "../../assets/images/features/features7.png";
 import badgeAppStore from "../../assets/images/logos/badgeAppStore.svg";
 import badgePlayStore from "../../assets/images/logos/badgePlayStore.svg";
 
+//webp
+import features1webp from "../../assets/images/features/webp/features1.webp";
+import features2webp from "../../assets/images/features/webp/features2.webp";
+import features3webp from "../../assets/images/features/webp/features3.webp";
+import features4webp from "../../assets/images/features/webp/features4.webp";
+import features5webp from "../../assets/images/features/webp/features5.webp";
+import features6webp from "../../assets/images/features/webp/features6.webp";
+import features7webp from "../../assets/images/features/webp/features7.webp";
+
 export default {
     data: function () {
         return {
@@ -149,6 +207,13 @@ export default {
             features5,
             features6,
             features7,
+            features1webp,
+            features2webp,
+            features3webp,
+            features4webp,
+            features5webp,
+            features6webp,
+            features7webp,
 
             isActive: false,
         }

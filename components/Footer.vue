@@ -42,7 +42,14 @@
             </div>
 
             <div class="p-8 flex items-center">
-                <img :src="panda" class="w-28" alt="">
+              <picture>
+                  <source
+                  :srcset="pandaWebp"
+                  type="image/webp"
+                  class="w-28"
+                  />
+                  <img :src="panda" class="w-28" alt="">
+              </picture>
             </div>
 
             <div class="absolute w-full bottom-5">
@@ -57,6 +64,8 @@
     import badgeAppStore from "../assets/images/logos/badgeAppStore.svg";
     import badgePlayStore from "../assets/images/logos/badgePlayStore.svg";
     import panda from "../assets/images/pandas/panda.png";
+    import pandaWebp from "../assets/images/pandas/webp/panda.webp";
+
 
     export default {
         data: function () {
@@ -64,6 +73,7 @@
                 badgeAppStore,
                 badgePlayStore,
                 panda,
+                pandaWebp,
 
                 year : new Date().getFullYear(),
             }
