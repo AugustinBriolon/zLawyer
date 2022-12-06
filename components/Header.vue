@@ -10,7 +10,7 @@
           type="image/webp"
           class="h-12 sm:h-16 cursor-pointer"
           />
-          <img :src="zeleLogo" class="h-12 sm:h-16 cursor-pointer" />
+          <img :src="zeleLogo" class="h-12 sm:h-16 cursor-pointer" alt="Logo zLawyer"/>
         </picture>
       </NuxtLink>
 

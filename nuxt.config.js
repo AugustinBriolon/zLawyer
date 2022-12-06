@@ -18,7 +18,6 @@ export default {
       { hid: 'title', name: 'title', content: 'La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !'},
       { hid: 'description', name: 'description', content: 'La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !' },
 
-
       // Twitter
       { hid: 't-type',name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
