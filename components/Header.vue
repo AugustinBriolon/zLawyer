@@ -4,14 +4,11 @@
       class="header mx-auto h-24 flex items-center justify-between px-8 py-6 w-full"
     >
       <NuxtLink to="/">
-        <picture>
-          <source
-          :srcset="zeleLogoWebp"
-          type="image/webp"
+        <nuxt-img
+          src="/images/logos/zeleLogo.png"
           class="h-12 sm:h-16 cursor-pointer"
-          />
-          <img :src="zeleLogo" class="h-12 sm:h-16 cursor-pointer" alt="Logo zLawyer"/>
-        </picture>
+          alt="Logo zLawyer"
+        />
       </NuxtLink>
 
       <ul class="items-center hidden xl:flex header-nav">
@@ -99,21 +96,17 @@
 </template>
 
 <script>
-import zeleLogo from "../assets/images/logos/zeleLogo.png";
-import zeleLogoWebp from "../assets/images/logos/zeleLogo.webp";
-import Vue from "vue";
-import VueAnalytics from "vue-analytics";
+import Vue from 'vue';
+import VueAnalytics from 'vue-analytics';
 
 Vue.use(VueAnalytics, {
-  id: "UA-7664894-1",
+  id: 'UA-7664894-1',
 });
 
 export default {
   data() {
     return {
       isActive: false,
-      zeleLogo,
-      zeleLogoWebp,
     };
   },
 };

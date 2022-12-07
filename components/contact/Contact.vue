@@ -63,7 +63,11 @@
 
           <!-- Content -->
           <div class="z-10 relative w-full max-w-2xl">
-            <img class="h-16" :src="zeleLogo" alt="logo zele solutions" />
+            <nuxt-img
+              class="h-16"
+              src="/images/logos/zeleLogo.svg"
+              alt="logo zele solutions"
+            />
             <h2 class="mt-6 text-4xl text-white">
               Un Renseignement ? <br />
               Une Démo ? <br />
@@ -74,13 +78,20 @@
               ergonomique, sans engagement !
             </p>
             <div class="mt-14 flex items-center">
-              <img :src="phoneLogo" alt="logo de telephone" />
+              <nuxt-img
+                src="/images/logos/phoneLogo.svg"
+                alt="logo de telephone"
+              />
               <p class="ml-4 flex-shrink-0">
                 <a class="text-blue" href="tel:330184257027">01 84 25 70 27</a>
               </p>
             </div>
             <div class="mt-14 flex items-center">
-              <img class="ml-2" :src="locaLogo" alt="logo de localisation" />
+              <nuxt-img
+                class="ml-2"
+                src="/images/logos/locaLogo.svg"
+                alt="logo de localisation"
+              />
               <p class="ml-6 text-blue flex-shrink-0">
                 Zele Solutions <br />
                 9, rue Angélique Verien, <br />
@@ -181,19 +192,11 @@
 
 <script>
 import axios from 'axios';
-
-import zeleLogo from '../../assets/images/logos/zeleLogo.svg';
-import phoneLogo from '../../assets/images/logos/phoneLogo.svg';
-import locaLogo from '../../assets/images/logos/locaLogo.svg';
 import json from '../../assets/data/pays.json';
 
 export default {
   data() {
     return {
-      zeleLogo,
-      phoneLogo,
-      locaLogo,
-
       allPays: [],
 
       cabinet: '',

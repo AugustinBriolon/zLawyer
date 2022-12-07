@@ -16,14 +16,11 @@
       >
     </div>
     <div class="container-img">
-      <picture>
-        <source :srcset="illustrationHeroWebp" type="image/webp" />
-        <img
-          class="anim-hero w-full"
-          :src="illustrationHero"
-          alt="illustration du logiciel"
-        />
-      </picture>
+      <nuxt-img
+        src="/images/hero/illustrationHero.png"
+        alt="illustration du logiciel"
+        class="w-full img-hero anim-hero"
+      />
       <p class="text-replace text-center text-2xl hidden lg:block">
         La solution la mieux notée par vos confrères !
       </p>
@@ -32,16 +29,11 @@
 </template>
 
 <script>
-import illustrationHero from '../../assets/images/hero/illustrationHero.png';
-import illustrationHeroWebp from '../../assets/images/hero/illustrationHero.webp';
-
 import { gsap } from 'gsap';
 
 export default {
   data: function () {
     return {
-      illustrationHero,
-      illustrationHeroWebp,
       replace: [
         {
           from: 'La solution la mieux notée par vos confrères',
@@ -76,11 +68,11 @@ export default {
 .container-img {
   perspective: 1500px;
 }
-.container-img img {
+.container-img .img-hero {
   transform: rotateY(-15deg);
 }
 @media screen and (max-width: 1024px) {
-  .container-img img {
+  .container-img .img-hero {
     transform: rotateY(0deg);
   }
 }

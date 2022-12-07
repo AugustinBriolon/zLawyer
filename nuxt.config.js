@@ -15,23 +15,23 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'msapplication-TileColor', content: '#da532c' },
       { name: 'theme-color', content: '#ffffff' },
-      { hid: 'title', name: 'title', content: 'Logiciel Avocat accessible et complet | zLawyer'},
+      { hid: 'title', name: 'title', content: 'Logiciel Avocat accessible et complet | zLawyer' },
       { hid: 'description', name: 'description', content: 'Logiciel avocat intuitif, simple, et complet pour la gestion du cabinet | zLawyer aide les avocats, depuis 2006, à ne plus perdre de temps... à en saisir.' },
-      {name: "keywords", content:"logicel avocat cabinet facturation"},
+      { name: "keywords", content: "logicel avocat cabinet facturation" },
 
       // Twitter
-      { hid: 't-type',name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: "Logiciel Avocat accessible et complet | zLawyer" },
       { name: 'twitter:description', content: "Logiciel avocat intuitif, simple, et complet pour la gestion du cabinet | zLawyer aide les avocats, depuis 2006, à ne plus perdre de temps... à en saisir." },
       { name: 'twitter:image', content: '/ogImage.png' },
 
       { name: 'format-detection', content: 'telephone=no' },
       // Open Graph
-      { hid: 'og-type',property: 'og:type', content: 'website' },
-      { hid: 'og-url',property: 'og:url', content: 'https://www.zlawyer.fr/logiciel-avocats/' },
-      { hid: 'og-title',property: 'og:title', content: "Logiciel Avocat accessible et complet | zLawyer" },
-      { hid: 'og-desc',property: 'og:description', content: "Logiciel avocat intuitif, simple, et complet pour la gestion du cabinet | zLawyer aide les avocats, depuis 2006, à ne plus perdre de temps... à en saisir." },
-      { hid: 'og-image',property: 'og:image', content: '/ogImage.png' },
+      { hid: 'og-type', property: 'og:type', content: 'website' },
+      { hid: 'og-url', property: 'og:url', content: 'https://www.zlawyer.fr/logiciel-avocats/' },
+      { hid: 'og-title', property: 'og:title', content: "Logiciel Avocat accessible et complet | zLawyer" },
+      { hid: 'og-desc', property: 'og:description', content: "Logiciel avocat intuitif, simple, et complet pour la gestion du cabinet | zLawyer aide les avocats, depuis 2006, à ne plus perdre de temps... à en saisir." },
+      { hid: 'og-image', property: 'og:image', content: '/ogImage.png' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -57,6 +57,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
+    // '@nuxt/image',
+    '@nuxt/image',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/vuetify',
     'nuxt-gsap-module',
@@ -69,7 +71,9 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/recaptcha"],
+  modules: [
+    "@nuxtjs/recaptcha"
+  ],
 
   publicRuntimeConfig: {
     recaptcha: {
@@ -86,7 +90,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     publicPath: "https://www.zlawyer.fr/logiciel-avocats/",
-    extend (config, ctx) {
+    extend(config, ctx) {
       config.performance.maxAssetSize = 700 * 1024
     }
   },
