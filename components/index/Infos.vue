@@ -11,7 +11,7 @@
         <div class="anim-infos sm:w-5/6 flex flex-col justify-start">
           <div class="flex items-start justify-start max-h-14">
             <img :src="infoIcon" alt="iconInfo" />
-            <h4 class="ml-4">Y a t-il un engagement ?</h4>
+            <h3 class="ml-4">Y a t-il un engagement ?</h3>
           </div>
 
           <p class="mt-5">
@@ -26,7 +26,7 @@
         <div class="anim-infos sm:w-5/6 mt-4 flex flex-col justify-start">
           <div class="flex items-start justify-start max-h-14">
             <img :src="infoIcon" alt="iconInfo" />
-            <h4 class="ml-4">Comment j’importe mes données ?</h4>
+            <h3 class="ml-4">Comment j’importe mes données ?</h3>
           </div>
 
           <p class="mt-5">
@@ -42,7 +42,7 @@
         <div class="anim-infos sm:w-5/6 mt-4 flex flex-col justify-start">
           <div class="flex items-start justify-start max-h-14">
             <img :src="infoIcon" alt="iconInfo" />
-            <h4 class="ml-4">Puis-je adapter mon abonnement ?</h4>
+            <h3 class="ml-4">Puis-je adapter mon abonnement ?</h3>
           </div>
 
           <p class="mt-5">
@@ -58,7 +58,7 @@
         <div class="anim-infos sm:w-5/6 mt-4 flex flex-col justify-start">
           <div class="flex items-start justify-start max-h-14">
             <img :src="infoIcon" alt="iconInfo" />
-            <h4 class="ml-4">Y a t-il des frais cachés ?</h4>
+            <h3 class="ml-4">Y a t-il des frais cachés ?</h3>
           </div>
 
           <p class="mt-5">

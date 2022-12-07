@@ -32,10 +32,10 @@
 </template>
 
 <script>
-import illustrationHero from "../../assets/images/hero/illustrationHero.png";
-import illustrationHeroWebp from "../../assets/images/hero/illustrationHero.webp";
+import illustrationHero from '../../assets/images/hero/illustrationHero.png';
+import illustrationHeroWebp from '../../assets/images/hero/illustrationHero.webp';
 
-import { gsap } from "gsap";
+import { gsap } from 'gsap';
 
 export default {
   data: function () {
@@ -44,14 +44,14 @@ export default {
       illustrationHeroWebp,
       replace: [
         {
-          from: "La solution la mieux notée par vos confrères",
-          to: "Votre solution de gestion de cabinet qui vous fait gagner du temps !",
+          from: 'La solution la mieux notée par vos confrères',
+          to: 'Votre solution de gestion de cabinet qui vous fait gagner du temps !',
         },
       ],
     };
   },
   mounted() {
-    let animHero = gsap.utils.toArray(".anim-hero");
+    let animHero = gsap.utils.toArray('.anim-hero');
     animHero.forEach((item, index) => {
       let tl = gsap.timeline();
       tl.to(item, {
@@ -85,6 +85,6 @@ export default {
   }
 }
 .text-replace {
-  font-family: "Roboto-Regular", sans-serif;
+  font-family: 'Roboto-Regular', sans-serif;
 }
 </style>

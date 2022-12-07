@@ -94,8 +94,11 @@
       <div class="p-10">
         <h2 class="p-2">Contact</h2>
 
-        <p class="text-response" :class="[isSuccess ? 'text-green-600' : 'text-red-600']">
-        {{ response }}
+        <p
+          class="text-response"
+          :class="[isSuccess ? 'text-green-600' : 'text-red-600']"
+        >
+          {{ response }}
         </p>
 
         <form
@@ -177,12 +180,12 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios';
 
-import zeleLogo from "../../assets/images/logos/zeleLogo.svg";
-import phoneLogo from "../../assets/images/logos/phoneLogo.svg";
-import locaLogo from "../../assets/images/logos/locaLogo.svg";
-import json from "../../assets/data/pays.json";
+import zeleLogo from '../../assets/images/logos/zeleLogo.svg';
+import phoneLogo from '../../assets/images/logos/phoneLogo.svg';
+import locaLogo from '../../assets/images/logos/locaLogo.svg';
+import json from '../../assets/data/pays.json';
 
 export default {
   data() {
@@ -191,40 +194,31 @@ export default {
       phoneLogo,
       locaLogo,
 
-      allPays: [
-        // "France",
-        // "Allemagne",
-        // "Chine",
-      ],
+      allPays: [],
 
-      cabinet: "",
-      pays: "",
-      nom: "",
-      prenom: "",
-      email: "",
-      telephone: "",
-      message: "",
+      cabinet: '',
+      pays: '',
+      nom: '',
+      prenom: '',
+      email: '',
+      telephone: '',
+      message: '',
 
       isSuccess: false,
-      response: "",
+      response: '',
     };
   },
   async mounted() {
     this.allPays = json;
     try {
       await this.$recaptcha.init();
-    } catch (e) {
-      console.error(e);
-    }
+    } catch (e) {}
   },
   methods: {
     async onSubmit() {
       try {
         const token = await this.$recaptcha.getResponse();
-        console.log("ReCaptcha token:", token);
-
         // send token to server alongside your form data
-
         // at the end you need to reset recaptcha
         await this.$recaptcha.reset();
 
@@ -237,30 +231,23 @@ export default {
           telephone: this.telephone,
           message: this.message,
         };
-
-        console.log(data);
-
         axios
-          .post("https://zlawyercontact.azurewebsites.net/api/contact", data, {
+          .post('https://zlawyercontact.azurewebsites.net/api/contact', data, {
             headers: {
-              Accept: "application/json",
+              Accept: 'application/json',
             },
           })
           .then(
             (response) => {
-              console.log("SUCCESS");
               this.isSuccess = response.status === 200 ? true : false;
               this.response = response.data;
-              this.$router.push("/contact-success");
+              this.$router.push('/contact-success');
             },
             (response) => {
-              console.log("ERROR");
               this.response = response.response.data;
             }
           );
-      } catch (e) {
-        console.error(e);
-      }
+      } catch (e) {}
     },
   },
 };
@@ -273,7 +260,6 @@ export default {
   justify-content: center;
   align-items: flex-start;
 }
-
 
 .card-contact {
   margin: 120px 0;
@@ -290,7 +276,7 @@ export default {
 .card-contact input,
 .card-contact select,
 .card-contact textarea {
-  font-family: "Roboto-Regular", sans-serif;
+  font-family: 'Roboto-Regular', sans-serif;
   border: 1px solid var(--color-blue);
   border-radius: 5px;
   padding: 5px 10px;
@@ -303,13 +289,13 @@ export default {
   border: 1px solid var(--color-orange);
 }
 .card-contact label {
-  font-family: "Roboto-Medium", sans-serif;
+  font-family: 'Roboto-Medium', sans-serif;
   color: var(--color-dark-blue);
 }
 .card-contact input,
 .card-contact select,
 .card-contact textarea {
-  font-family: "Roboto-medium", sans-serif;
+  font-family: 'Roboto-medium', sans-serif;
   color: #394454b5;
 }
 .contact-card-form {
