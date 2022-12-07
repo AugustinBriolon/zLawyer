@@ -6,7 +6,7 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "zLawyer",
+    title: "Logiciel Avocat accessible et complet | zLawyer",
     htmlAttrs: {
       lang: "fr",
     },
@@ -15,21 +15,22 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'msapplication-TileColor', content: '#da532c' },
       { name: 'theme-color', content: '#ffffff' },
-      { hid: 'title', name: 'title', content: 'La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !'},
-      { hid: 'description', name: 'description', content: 'La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !' },
+      { hid: 'title', name: 'title', content: 'Logiciel Avocat accessible et complet | zLawyer'},
+      { hid: 'description', name: 'description', content: 'Logiciel avocat intuitif, simple, et complet pour la gestion du cabinet | zLawyer aide les avocats, depuis 2006, à ne plus perdre de temps... à en saisir.' },
+      {name: "keywords", content:"logicel avocat cabinet facturation"},
 
       // Twitter
       { hid: 't-type',name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
-      { name: 'twitter:description', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
+      { name: 'twitter:title', content: "Logiciel Avocat accessible et complet | zLawyer" },
+      { name: 'twitter:description', content: "Logiciel avocat intuitif, simple, et complet pour la gestion du cabinet | zLawyer aide les avocats, depuis 2006, à ne plus perdre de temps... à en saisir." },
       { name: 'twitter:image', content: '/ogImage.png' },
 
       { name: 'format-detection', content: 'telephone=no' },
       // Open Graph
       { hid: 'og-type',property: 'og:type', content: 'website' },
       { hid: 'og-url',property: 'og:url', content: 'https://www.zlawyer.fr/logiciel-avocats/' },
-      { hid: 'og-title',property: 'og:title', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
-      { hid: 'og-desc',property: 'og:description', content: "La solution de gestion de cabinets d’avocats simple, ergonomique, sans engagement !" },
+      { hid: 'og-title',property: 'og:title', content: "Logiciel Avocat accessible et complet | zLawyer" },
+      { hid: 'og-desc',property: 'og:description', content: "Logiciel avocat intuitif, simple, et complet pour la gestion du cabinet | zLawyer aide les avocats, depuis 2006, à ne plus perdre de temps... à en saisir." },
       { hid: 'og-image',property: 'og:image', content: '/ogImage.png' },
     ],
     link: [
