@@ -8,7 +8,8 @@
 
             <div class="mb-8 sm:mb-0 sm:mr-8">
               <p class="pricingText text-6xl text-center">45€ <br>
-                <span class="text-2xl">/mois</span>
+                <span class="text-2xl block">/mois</span>
+                <span class="text-2xl block">/utilisateur</span>
               </p>
             </div>
 
