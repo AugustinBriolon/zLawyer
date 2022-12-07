@@ -28,10 +28,6 @@
     "html-webpack-plugin": "^5.5.0",
     "nuxt-gsap-module": "^1.7.2",
     "postcss": "^7",
-    "sass-loader": "^10.1.1",
-    "webpack": "^4.46.0"
-  },
-  "engines": {
-    "node": ">=8.0.0"
+    "sass-loader": "^10.1.1"
   }
 }
